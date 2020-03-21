@@ -1,0 +1,9 @@
+{
+	"Name": "ConsoleWeapons",
+	"Authors": ["Janssent"],
+	"Description": "Console commands to give weapons to players on the fly and list all available weapons.",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
