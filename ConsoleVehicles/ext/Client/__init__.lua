@@ -33,7 +33,7 @@ function ConsoleVehiclesClient:OnPartitionLoaded(partition)
 			
 			local vehicleBlueprint = VehicleBlueprint(instance)
 			
-			-- Vehicles/AH6/AH6_Littlebird --> AH6_Littlebird
+			-- Vehicles/AH6/AH6_Littlebird --> AH6-Littlebird
 			local vehicleName = vehicleBlueprint.name:gsub(".+/.+/",""):gsub("_","-")
 
 			-- The Blueprint is only needed in the server script.
