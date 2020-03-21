@@ -1,4 +1,4 @@
-# ConsoleVehicle
+# ConsoleVehicles
 
 Console commands to spawn vehicles and list all available vehicles.
 
