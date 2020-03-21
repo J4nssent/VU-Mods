@@ -24,7 +24,7 @@ end
 -- Registering console commands is only possible in a client script.
 function ConsoleWeaponsClient:RegisterConsoleCommands()
 	Console:Register('list', '[weapons | gadgets] List all available weapons/gadgets', self, self.OnListWeapons)
-	Console:Register('listAttachments', '(weapon) List available attachments for equipped weapon', self, self.OnListAttachments)
+	Console:Register('listAttachments', '(weapon) List available attachments for a weapon', self, self.OnListAttachments)
 	Console:Register('equip', '(weapon/gadget) [weaponSlot] [attachment] [attachment]... Equip a weapon/gadget in weaponSlot with attachments', self, self.OnEquipWeapon)
 end
 
