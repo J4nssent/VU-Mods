@@ -171,7 +171,7 @@ end)
 
 Events:Subscribe('Level:RegisterEntityResources', function(levelData)
 	local xp1_004_cq_lRegistry = RegistryContainer(ResourceManager:SearchForInstanceByGuid(Guid('C7039B02-0415-6F1C-C65A-59A89432C783')))
-	ResourceManager:AddRegistry(xp1_002_cq_sRegistry, ResourceCompartment.ResourceCompartment_Game)
+	ResourceManager:AddRegistry(xp1_004_cq_lRegistry, ResourceCompartment.ResourceCompartment_Game)
 
 	local xp3_shield_conquestlarge0Registry = RegistryContainer(ResourceManager:SearchForInstanceByGuid(Guid('FC90635F-4589-EBB6-A323-EBB0050BC5BD')))
 	ResourceManager:AddRegistry(xp3_shield_conquestlarge0Registry, ResourceCompartment.ResourceCompartment_Game)
