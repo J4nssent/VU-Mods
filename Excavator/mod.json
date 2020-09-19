@@ -1,0 +1,9 @@
+{
+	"Name": "Excavator",
+	"Authors": ["Janssent"],
+	"Description": "Big dig thing",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
