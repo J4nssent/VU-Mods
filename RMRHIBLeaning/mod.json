@@ -1,0 +1,9 @@
+{
+	"Name": "RMRHIBBoat",
+	"Authors": ["Janssent"],
+	"Description": "RHIB Boat with added seats",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
