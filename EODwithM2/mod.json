@@ -1,0 +1,10 @@
+{
+	"Name": "EODwithM2",
+	"Authors": [ "Janssent" ],
+	"Description": "",
+	"Version": "1.0.0",
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}
