@@ -1,0 +1,9 @@
+{
+	"Name": "Bicycle",
+	"Authors": ["Janssent"],
+	"Description": "a vehicle consisting of two wheels held in a frame one behind the other, propelled by pedals and steered with handlebars attached to the front wheel.",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
