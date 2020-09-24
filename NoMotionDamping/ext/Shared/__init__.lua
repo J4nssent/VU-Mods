@@ -1,13 +1,13 @@
 
 local helicopters = { "Vehicles/Mi28/Mi28", "Vehicles/Z11W/Z-11w", "Vehicles/AH1Z/AH1Z", "Vehicles/AH6/AH6_Littlebird", "Vehicles/Venom/Venom", "Vehicles/KA-60_Kasatka/KA-60_Kasatka",}
 
-function OnPartitionLoaded(partition)
+Events:Subscribe('Partition:Loaded', function(partition)
 
 	local instances = partition.instances
 
 	for _, instance in pairs(instances) do
 
-		if instance.typeInfo.name == 'VehicleBlueprint' then
+		if instance:Is('VehicleBlueprint') then
 			
 			local vehicleBlueprint = VehicleBlueprint(instance)
 
@@ -23,8 +23,6 @@ function OnPartitionLoaded(partition)
 			end
 		end
 	end
-end
-
-Events:Subscribe('Partition:Loaded', OnPartitionLoaded)
+end)
 
 
