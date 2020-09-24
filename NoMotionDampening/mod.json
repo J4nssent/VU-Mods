@@ -1,9 +1,0 @@
-{
-	"Name": "NoMotionDampening",
-	"Authors": ["Janssent"],
-	"Description": "Loops in helis",
-	"URL": "",
-	"Version": "0",
-	"HasWebUI": false,
-	"HasVeniceEXT": true
-}
