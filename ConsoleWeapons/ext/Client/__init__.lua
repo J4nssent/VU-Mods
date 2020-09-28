@@ -10,8 +10,8 @@ end
 
 function ConsoleWeaponsClient:RegisterVars()
 	self.weaponTable = {}
-	self.weaponKeys = {"870", "A91", "ACR", "AEK971", "AEK971-M320-HE", "AEK971-M320-LVG", "AEK971-M320-SHG", "AEK971-M320-SMK", "AK74M", "AK74M-M26Mass", "AK74M-M26Mass-Flechette", "AK74M-M26Mass-Frag", "AK74M-M26Mass-Slug", "AK74M-M320-HE", "AK74M-M320-LVG", "AK74M-M320-SHG", "AK74M-M320-SMK", "AK74M-US", "AKS74u", "AKS74u-US", "AN94", "AN94-M320-HE", "AN94-M320-LVG", "AN94-M320-SHG", "AN94-M320-SMK", "ASVal", "Crossbow-Scoped-Cobra", "Crossbow-Scoped-RifleScope", "DAO-12", "F2000", "FAMAS", "FGM148", "FIM92", "G36C", "G3A3", "G3A3-M26-Buck", "G3A3-M26-Flechette", "G3A3-M26-Frag", "G3A3-M26-Slug", "Glock17", "Glock17-Silenced", "Glock18", "Glock18-Silenced", "HK417", "HK53", "JNG90", "Jackhammer", "KH2002", "Knife", "Knife-Razor", "L85A2", "L86", "L96", "LSAT", "M1014", "M16-Burst", "M16A4", "M16A4-M26-Buck", "M16A4-M26-Flechette", "M16A4-M26-Frag", "M16A4-M26-Slug", "M16A4-M320-HE", "M16A4-M320-LVG", "M16A4-M320-SHG", "M16A4-M320-SMK", "M16A4-RU", "M1911", "M1911-Lit", "M1911-Silenced", "M1911-Tactical", "M240", "M249", "M27IAR", "M27IAR-RU", "M39EBR", "M4", "M40A5", "M416", "M416-M26-Buck", "M416-M26-Flechette", "M416-M26-Frag", "M416-M26-Slug", "M416-M320-HE", "M416-M320-LVG", "M416-M320-SHG", "M416-M320-SMK", "M4A1", "M4A1-RU", "M60", "M67", "M9", "M9-RU", "M9-Silenced", "M9-TacticalLight", "M93R", "M98B", "MG36", "MK11", "MK11-RU", "MP412Rex", "MP443", "MP443-Silenced", "MP443-TacticalLight", "MP443-US", "MP5K", "MP7", "MTAR", "MagpulPDR", "P90", "PP-19", "PP2000", "Pecheneg", "QBB-95", "QBU-88-Sniper", "QBZ-95B", "RPG7", "RPK-74M", "RPK-74M-US", "SAIGA-20K", "SCAR-H", "SCAR-L", "SCAR-L-M26-Buck", "SCAR-L-M26-Flechette", "SCAR-L-M26-Frag", "SCAR-L-M26-Slug", "SCAR-L-M320-HE", "SCAR-L-M320-LVG", "SCAR-L-M320-SHG", "SCAR-L-M320-SMK", "SG553LB", "SKS", "SMAW", "SPAS12", "SV98", "SVD", "SVD-US", "Sa18IGLA", "SteyrAug", "SteyrAug-M26-Buck", "SteyrAug-M26-Flechette", "SteyrAug-M26-Frag", "SteyrAug-M26-Slug", "SteyrAug-M320-HE", "SteyrAug-M320-LVG", "SteyrAug-M320-SHG", "SteyrAug-M320-SMK", "Taurus44", "Taurus44-Scoped", "Type88", "UMP45", "USAS-12",}	
-	self.gadgetKeys = {"Ammobag", "C4", "Claymore", "Defib", "EODBot", "M15", "M26Mass", "M26Mass-Flechette", "M26Mass-Slug", "M320-HE", "M320-LVG", "M320-SHG", "M320-SMK", "MAV", "Medkit", "RadioBeacon", "Repairtool", "SOFLAM", "UGS",}
+	self.weaponKeys = {"870", "A91", "ACR", "AEK971", "AEK971_M320_HE", "AEK971_M320_LVG", "AEK971_M320_SHG", "AEK971_M320_SMK", "AK74M", "AK74M_M26Mass", "AK74M_M26Mass_Flechette", "AK74M_M26Mass_Frag", "AK74M_M26Mass_Slug", "AK74M_M320_HE", "AK74M_M320_LVG", "AK74M_M320_SHG", "AK74M_M320_SMK", "AK74M_US", "AKS74u", "AKS74u_US", "AN94", "AN94_M320_HE", "AN94_M320_LVG", "AN94_M320_SHG", "AN94_M320_SMK", "ASVal", "Crossbow_Scoped_Cobra", "Crossbow_Scoped_RifleScope", "DAO-12", "F2000", "FAMAS", "FGM148", "FIM92", "G36C", "G3A3", "G3A3_M26_Buck", "G3A3_M26_Flechette", "G3A3_M26_Frag", "G3A3_M26_Slug", "Glock17", "Glock17_Silenced", "Glock18", "Glock18_Silenced", "HK417", "HK53", "JNG90", "Jackhammer", "KH2002", "Knife", "Knife_Razor", "L85A2", "L86", "L96", "LSAT", "M1014", "M16A4", "M16A4_M26_Buck", "M16A4_M26_Flechette", "M16A4_M26_Frag", "M16A4_M26_Slug", "M16A4_M320_HE", "M16A4_M320_LVG", "M16A4_M320_SHG", "M16A4_M320_SMK", "M16A4_RU", "M16_Burst", "M1911", "M1911_Lit", "M1911_Silenced", "M1911_Tactical", "M240", "M249", "M27IAR", "M27IAR_RU", "M39EBR", "M4", "M40A5", "M416", "M416_M26_Buck", "M416_M26_Flechette", "M416_M26_Frag", "M416_M26_Slug", "M416_M320_HE", "M416_M320_LVG", "M416_M320_SHG", "M416_M320_SMK", "M4A1", "M4A1_RU", "M60", "M67", "M9", "M93R", "M98B", "M9_RU", "M9_Silenced", "M9_TacticalLight", "MG36", "MK11", "MK11_RU", "MP412Rex", "MP443", "MP443_Silenced", "MP443_TacticalLight", "MP443_US", "MP5K", "MP7", "MTAR", "MagpulPDR", "P90", "PP-19", "PP2000", "Pecheneg", "QBB-95", "QBU-88_Sniper", "QBZ-95B", "RPG7", "RPK-74M", "RPK-74M_US", "SAIGA_20K", "SCAR-H", "SCAR-L", "SCAR-L_M26_Buck", "SCAR-L_M26_Flechette", "SCAR-L_M26_Frag", "SCAR-L_M26_Slug", "SCAR-L_M320_HE", "SCAR-L_M320_LVG", "SCAR-L_M320_SHG", "SCAR-L_M320_SMK", "SG553LB", "SKS", "SMAW", "SPAS12", "SV98", "SVD", "SVD_US", "Sa18IGLA", "SteyrAug", "SteyrAug_M26_Buck", "SteyrAug_M26_Flechette", "SteyrAug_M26_Frag", "SteyrAug_M26_Slug", "SteyrAug_M320_HE", "SteyrAug_M320_LVG", "SteyrAug_M320_SHG", "SteyrAug_M320_SMK", "Taurus44", "Taurus44_Scoped", "Type88", "UMP45", "USAS-12"}	
+	self.gadgetKeys = {"Ammobag", "C4", "Claymore", "Defib", "EODBot", "M15", "M224", "M26Mass", "M26Mass_Flechette", "M26Mass_Frag", "M26Mass_Slug", "M320_HE", "M320_LVG", "M320_SHG", "M320_SMK", "MAV", "Medkit", "RadioBeacon", "Repairtool", "SOFLAM", "UGS"}
 	self.unlockTables = {}
 end
 
@@ -24,8 +24,8 @@ end
 -- Registering console commands is only possible in a client script.
 function ConsoleWeaponsClient:RegisterConsoleCommands()
 	Console:Register('list', '[weapons | gadgets] List all available weapons/gadgets', self, self.OnListWeapons)
-	Console:Register('listAttachments', '(weapon) List available attachments for equipped weapon', self, self.OnListAttachments)
-	Console:Register('equip', '(weapon/gadget) [weaponSlot] [attachment] [attachment]... Equip a weapon/gadget in weaponSlot with attachments', self, self.OnEquipWeapon)
+	Console:Register('listAttachments', '<weapon> List available attachments for (equipped) weapon', self, self.OnListAttachments)
+	Console:Register('equip', '<weapon/gadget> [weaponSlot] [attachment] [attachment]... Equip a weapon/gadget in weaponSlot with attachments', self, self.OnEquipWeapon)
 end
 
 -- Store the reference of all the SoldierWeaponUnlockAssets that get loaded. 
@@ -38,14 +38,15 @@ function ConsoleWeaponsClient:OnPartitionLoaded(partition)
 			
 			local weaponUnlockAsset = SoldierWeaponUnlockAsset(instance)
 			
-			local weaponName = weaponUnlockAsset.name:match("/U_.+"):sub(4):gsub("_","-")
+			-- Weapons/SAIGA20K/U_SAIGA_20K --> SAIGA_20K
+			local weaponName = weaponUnlockAsset.name:match("/U_.+"):sub(4)
 		
 			self.weaponTable[weaponName] = weaponUnlockAsset
 		end
 	end
 end
 
--- Store the UnlockAsset names for each weapon 
+-- Once the everything is loaded, store the names of the UnlockAssets in each CustomizationUnlockParts array (each array is an attachment/sight/camo slot).
 function ConsoleWeaponsClient:OnLevelLoaded()
 	
 	for weaponName, weaponUnlockAsset in pairs(self.weaponTable) do
@@ -107,6 +108,8 @@ function ConsoleWeaponsClient:OnListAttachments(args)
 	
 		return 'Usage: _weapons.listAttachments_ <*weapon*>'	
 	end
+
+	args[1] = firstToUpper(args[1])
 	
 	if self.weaponTable[args[1]] == nil then 
 	
@@ -152,13 +155,15 @@ function ConsoleWeaponsClient:OnEquipWeapon(args)
 	-- Validate the arguments.
 	if  args[1] == nil or (args[2] ~= nil and tonumber(args[2]) == nil) then
 	
-		return 'Usage: _weapons.equip_ <*weapon*> [*weaponSlot*][*attachment*][*attachment*]...'
+		return 'Usage: `consoleweapons.equip` <*weapon*> [*weaponSlot*][*attachment*][*attachment*]...'
 		
 	elseif args[2] ~= nil and tonumber(args[2]) > 9 then
 	
 		return 'Error: **Invalid weaponSlot specified.**'
 
 	end
+
+	args[1] = firstToUpper(args[1])
 	
 	if self.weaponTable[args[1]] == nil then 
 	
@@ -166,9 +171,20 @@ function ConsoleWeaponsClient:OnEquipWeapon(args)
 
 			if string.lower(weaponName):match(string.lower(args[1])) then
 		
-				args[1] = weaponName
+				-- Prevent the mod from equipping AN94_M320_HE when typing AN, use the full name to equip these variants
+				if weaponName:match("M320") or weaponName:match("M26") then
 				
-				break
+					if string.lower(args[1]):match("m320") or string.lower(args[1]):match("m26") then
+
+						args[1] = weaponName
+		
+						break
+					end
+				else
+					args[1] = weaponName
+
+					break
+				end
 			end
 		end
 	end
@@ -184,7 +200,7 @@ function ConsoleWeaponsClient:OnEquipWeapon(args)
 		
 			local matched = false
 	
-			for unlockName,_ in pairs(self.unlockTables[weaponName]) do
+			for unlockName,_ in pairs(self.unlockTables[args[1]]) do
 
 				if string.lower(unlockName):match(string.lower(args[i])) then
 				
@@ -206,6 +222,11 @@ function ConsoleWeaponsClient:OnEquipWeapon(args)
 	-- Notify the server it needs to change the players weapon
 	NetEvents:SendLocal('ConsoleWeapons:EquipWeapon', args)
 	return 'Equipped *'..args[1]..'*'
+end
+
+function firstToUpper(str)
+
+    return (str:gsub("^%l", string.upper))
 end
 
 g_ConsoleWeaponsClient = ConsoleWeaponsClient()

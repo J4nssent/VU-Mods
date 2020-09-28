@@ -28,15 +28,21 @@ function ConsoleWeaponsServer:OnPartitionLoaded(partition)
 			
 			local weaponUnlockAsset = SoldierWeaponUnlockAsset(instance)
 		
-			-- Weapons/SAIGA20K/U_SAIGA_20K --> SAIGA-20K
-			local weaponName = weaponUnlockAsset.name:match("/U_.+"):sub(4):gsub("_","-")
+			-- Weapons/SAIGA20K/U_SAIGA_20K --> SAIGA_20K
+			local weaponName = weaponUnlockAsset.name:match("/U_.+"):sub(4)
+
+
+			if not weaponUnlockAsset.name:match("Gadgets") then
+				print('"'..weaponName..'", ')
+			end
+
 			
 			self.weaponTable[weaponName] = weaponUnlockAsset
 		end
 	end
 end
 
--- Store the UnlockAssets for each weapon 
+-- Once the everything is loaded, store the UnlockAssets in each CustomizationUnlockParts array (each array is an attachment/sight/camo slot).
 function ConsoleWeaponsServer:OnLevelLoaded()
 	
 	for weaponName, weaponUnlockAsset in pairs(self.weaponTable) do
@@ -51,8 +57,9 @@ function ConsoleWeaponsServer:OnLevelLoaded()
 			
 				for _, asset in pairs(unlockParts.selectableUnlocks) do
 				
+					-- Weapons/AN94/U_AN94_Acog --> Acog
 					local unlockAssetName = asset.debugUnlockId:gsub("U_.+_","")
-					
+
 					self.unlockTables[weaponName][unlockAssetName] = asset
 				end
 			end
@@ -60,7 +67,7 @@ function ConsoleWeaponsServer:OnLevelLoaded()
 	end
 end
 
-
+-- args[1]: weaponName, args[2]: weaponSlot, args[3+]: attachments
 function ConsoleWeaponsServer:OnEquipWeapon(player, args)
 
 	local attachments = {}
@@ -72,6 +79,5 @@ function ConsoleWeaponsServer:OnEquipWeapon(player, args)
 	local weaponslot = tonumber(args[2]) or player.soldier.weaponsComponent.currentWeaponSlot
 	player:SelectWeapon(weaponslot, self.weaponTable[args[1]], attachments)
 end
-
 
 g_ConsoleWeaponsServer = ConsoleWeaponsServer()

@@ -26,18 +26,17 @@ function ConsoleVehiclesServer:OnPartitionLoaded(partition)
 			
 			local vehicleBlueprint = VehicleBlueprint(instance)
 			
-			-- Vehicles/AH6/AH6_Littlebird --> AH6-Littlebird
-			local vehicleName = vehicleBlueprint.name:gsub(".+/.+/",""):gsub("_","-")
+			-- Vehicles/AH6/AH6_Littlebird --> AH6_Littlebird
+			local vehicleName = vehicleBlueprint.name:gsub(".+/.+/","")
 		
 			self.vehicleTable[vehicleName] = vehicleBlueprint
 		end
 	end
 end
 
-
 function ConsoleVehiclesServer:OnSpawnVehicle(player, args)
 	
-	-- If no second argument is specified (arg[2] == nil) distance is set to 5
+	-- If no arguments are specified distance is set to 5 and height is set to 2
 	local distance = args[2] or 5
 	
 	local height = args[3] or 2
@@ -65,6 +64,5 @@ function ConsoleVehiclesServer:OnSpawnVehicle(player, args)
 		entity:Init(Realm.Realm_ClientAndServer, true)
 	end
 end
-
 
 g_ConsoleVehiclesServer = ConsoleVehiclesServer()
