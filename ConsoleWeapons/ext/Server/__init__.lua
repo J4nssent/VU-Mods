@@ -30,12 +30,6 @@ function ConsoleWeaponsServer:OnPartitionLoaded(partition)
 		
 			-- Weapons/SAIGA20K/U_SAIGA_20K --> SAIGA_20K
 			local weaponName = weaponUnlockAsset.name:match("/U_.+"):sub(4)
-
-
-			if not weaponUnlockAsset.name:match("Gadgets") then
-				print('"'..weaponName..'", ')
-			end
-
 			
 			self.weaponTable[weaponName] = weaponUnlockAsset
 		end
