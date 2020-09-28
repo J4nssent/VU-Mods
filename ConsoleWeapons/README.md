@@ -1,9 +1,11 @@
-# ConsoleVehicles	
+# ConsoleWeapons	
 
-Console commands to spawn vehicles and list all available vehicles.	
+Console commands to give weapons to players on the fly and list all available weapons.	
 
 ## Commands:	
 
-- `list` List all available vehicles	
+- `list [weapons | gadgets]` List all available weapons/gadgets	
 
-- `spawn (vehicle) [distance] [height]` Spawn a vehicle
+- `listAttachments (weapon)` List available attachments for a weapon	
+
+- `equip (weapon/gadget) [weaponSlot] [attachment] [attachment]...` Equip a weapon/gadget in weaponSlot with attachments
