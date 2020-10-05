@@ -8,6 +8,7 @@ A few useful VU mods and a lot of useless mods just for fun.
 | --- | ----------- |
 | [ConsoleVehicles](ConsoleVehicles) | Console commands to spawn vehicles and list available vehicles. |
 | [ConsoleWeapons](ConsoleWeapons) | Console commands to give weapons to players on the fly and list available weapons. |
+| [MapZoneHelper](MapZoneHelper) | Draw, load, adjust and print arrays of Vec3s for adjusting capture zones, out-of-bounds areas etc. |
 | [RMVenom](RMVenom) | Modified Venom helicopter with copilot entry, 6 passenger entries and removed gunner entries for RM . |
 | [RMHumveeHMG](RMHumveeHMG) | Modified COOP Humvee with M2 HMG for RM. |
 | [RMHumveeNaked](RMHumveeNaked) | Modified MP Humvee without CROWS turret for RM |
