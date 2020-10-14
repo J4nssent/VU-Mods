@@ -1,9 +1,11 @@
 
-function ServerTest(player)
+local activePlayer = nil
+
+function ServerTest(player, message)
 
 	print("ServerTest")
 
-	--Test stuff
+	-- test stuff
 end
 
 local isBool = {
@@ -155,7 +157,7 @@ Events:Subscribe('Player:Chat', function(player, recipientMask, message)
 	end
 
 	if parts[1] == "!servertest" then
-		ServerTest(player)
+		ServerTest(player, parts[2])
 	end
 
 	if parts[1] == "!serverblueprints" then
@@ -176,6 +178,14 @@ Events:Subscribe('Player:Chat', function(player, recipientMask, message)
 
 	if parts[1] == "!cliententities" then
 		NetEvents:Broadcast("clientEntities", parts[2])
+	end
+
+	if parts[1] == "!viewmode" then
+		local mode = tonumber(parts[2]) or 0
+		if mode < 0 or mode > 24 then
+			return
+		end
+		NetEvents:Broadcast("worldViewMode", mode)
 	end
 end)
 
@@ -204,8 +214,12 @@ function ServerEntities(enable)
 		print("serverEntities enabled")
 
 		entityCreateHook = Hooks:Install('EntityFactory:Create', 1, function(hook, entityData)
-			print(entityData.typeInfo.name)
-			print(entityData.instanceGuid)
+			--print(entityData.typeInfo.name)
+			--print(entityData.instanceGuid)
+
+			if entityData.instanceGuid == Guid('ABC0FF5F-741D-57F9-E25F-9B963BE02260') then
+				print("nice")
+			end
 		end)
 
 	elseif not asBool[enable] and entityCreateHook then

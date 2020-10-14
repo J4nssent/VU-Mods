@@ -61,3 +61,9 @@ NetEvents:Subscribe("clientEntities", function(enable)
 		entityCreateHook:Uninstall()
 	end
 end)
+
+NetEvents:Subscribe("worldViewMode", function(mode)
+
+	local renderSettings = WorldRenderSettings(ResourceManager:GetSettings("WorldRenderSettings"))
+	renderSettings.viewMode = mode
+end)

@@ -1,0 +1,9 @@
+{
+	"Name": "Metro CQ 2",
+	"Authors": ["Flash_Hit"],
+	"Description": "Play metro cq in the green area",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
