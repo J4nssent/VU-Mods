@@ -1,7 +1,7 @@
 {
-	"Name": "Metro CQ 2",
-	"Authors": ["Flash_Hit"],
-	"Description": "Play metro cq in the green area",
+	"Name": "ScoutRocketpodsUnlock",
+	"Authors": ["Janssent"],
+	"Description": "Adds a rocketpod unlock and weapon to the scout helicopters",
 	"URL": "",
 	"Version": "0",
 	"HasWebUI": false,
