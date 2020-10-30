@@ -1,0 +1,9 @@
+{
+	"Name": "MapZoneHelper",
+	"Authors": ["Janssent"],
+	"Description": "Draw, load, adjust and print arrays of Vec3s for adjusting capture zones, out-of-bounds areas etc",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
