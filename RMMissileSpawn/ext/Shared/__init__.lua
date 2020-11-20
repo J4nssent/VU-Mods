@@ -17,6 +17,9 @@ Events:Subscribe('Partition:Loaded', function(partition)
     local artyProjectileData = ProjectileEntityData(artyProjectileBlueprint.object:Clone(customProjectileDataGuid))
     local artyExplosionData = ExplosionEntityData(artyProjectileData.explosion:Clone(customExplosionDataGuid))
 
+    artyProjectileBlueprint.object = artyProjectileData
+    artyProjectileData.explosion = artyExplosionData
+
     -- Make changes...
 
     partition:AddInstance(artyProjectileBlueprint)
