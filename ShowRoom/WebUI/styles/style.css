@@ -1,0 +1,24 @@
+* {
+  user-select: none;
+}
+
+::-webkit-scrollbar { 
+  display: none; 
+}
+
+#vehicle {
+  width: 60%;
+  height: 50%;
+
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+}
+
+#soldier {
+  width: 45%;
+  height: 97%;
+
+  position: absolute;
+  right: 0;
+}
