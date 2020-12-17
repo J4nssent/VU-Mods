@@ -21,7 +21,7 @@ local mouseButtonLevel = 0
 local mouseWheelLevel = 0
 
 local uiCompData = nil
-local uiCompDataClone = nil
+local defaultData = nil
 
 local updateInputEvent = nil
 local updateSoldierEvent = nil
