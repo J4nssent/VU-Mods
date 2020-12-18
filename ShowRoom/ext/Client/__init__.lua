@@ -154,7 +154,6 @@ function GetPitchedRotation(yaw, yawOffset, pitch)
 end
 
 function UnsubscribeEvents()
-	-- Not setting events to nil after unsubscribing will cause a crash when resubscribing
 	if updateInputEvent ~= nil then updateInputEvent:Unsubscribe() updateInputEvent = nil end
 	if updateSoldierEvent ~= nil then updateSoldierEvent:Unsubscribe() updateSoldierEvent = nil end
 	if updateVehicleEvent ~= nil then updateVehicleEvent:Unsubscribe() updateVehicleEvent = nil end
