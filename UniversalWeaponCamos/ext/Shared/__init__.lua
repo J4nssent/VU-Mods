@@ -2,9 +2,11 @@
 -- This mod creates a mesh texture variation and matching unlockAsset for every texture in the config file, for every primary weapon in the game.
 -- It does not create a MeshMaterialVariation for the custom MeshVariationDatabaseEntry (unlike vanilla), so the replaced textures use the same shader and shader parameters as the original
 
+local ITEMS_PER_FRAME = 100
+local Async = require('__shared/Async')
+
 local config = require('__shared/config')
 local isWeaponMesh = require('__shared/weaponMeshes')
-
 
 local variationDataTables = {}
 
@@ -19,7 +21,9 @@ Events:Subscribe('Partition:Loaded', function(partition)
 		-- Find the gamemode MeshVariationDatabase, it contains all weapon meshes
 		if meshVariationDatabase.name:gsub(level,''):match('Levels/.+/MeshVariationDb_Win32') then -- Level: Levels/MeshVariationDb_Win32, Gamemode: Levels/Conquest_Large/MeshVariationDb_Win32
 
-			AddWeaponSkinEntries(meshVariationDatabase)
+			Async:Start(function()
+				AddWeaponSkinEntries(meshVariationDatabase)
+			end)
 		end
 	end
 end)
@@ -28,6 +32,11 @@ function AddWeaponSkinEntries(meshVariationDatabase)
 
 	-- Iterate all entries in the gamemodes MeshVariationDatabase
 	for index, entry in pairs(meshVariationDatabase.entries) do
+
+		if math.fmod(index, ITEMS_PER_FRAME) == 0 then
+
+			Async:Yield()
+		end
 
 		entry = MeshVariationDatabaseEntry(entry)
 
