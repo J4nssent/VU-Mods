@@ -1,0 +1,9 @@
+{
+	"Name": "Briefcase",
+	"Authors": ["Janssent"],
+	"Description": "Modifies the medkit to look like a briefcase",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

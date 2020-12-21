@@ -1,0 +1,9 @@
+{
+	"Name": "RainbowCars",
+	"Authors": ["Janssent"],
+	"Description": "Cloning MeshVariationDatabaseEntries and modifying the CoatColor paramater to change the color of the car object",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

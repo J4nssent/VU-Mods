@@ -1,6 +1,6 @@
 {
 	"Name": "RMVenom",
-	"Authors": ["J4nssent"],
+	"Authors": ["Janssent"],
 	"Description": "Modifies the Venom helicopter to have a copilot and passenger seats. Also modifies damage model, flight physics, FOV. Removes the miniguns",
 	"URL": "",
 	"Version": "0",

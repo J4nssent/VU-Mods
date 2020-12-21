@@ -1,0 +1,9 @@
+{
+	"Name": "GodMagnum",
+	"Authors": ["Janssent"],
+	"Description": "A magnum with a reflex sight, supressor, flash hider, laser, flashlight and bayonet",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

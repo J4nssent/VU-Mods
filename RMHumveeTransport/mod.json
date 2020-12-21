@@ -1,0 +1,9 @@
+{
+	"Name": "RMHumveeTransport",
+	"Authors": ["Janssent"],
+	"Description": "Modified MP Humvee without CROWS turret for RM.",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

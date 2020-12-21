@@ -1,0 +1,9 @@
+{
+	"Name": "PaintBall",
+	"Authors": ["Janssent"],
+	"Description": "Guns are now paintball guns.",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
