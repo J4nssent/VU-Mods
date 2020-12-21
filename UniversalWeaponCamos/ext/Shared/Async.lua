@@ -10,7 +10,7 @@ AsyncState = {
 }
 
 function Async:__init()
-	print("Initializing Async")
+	-- print("Initializing Async")
 	self:RegisterVars()
 	self:RegisterEvents()
 end

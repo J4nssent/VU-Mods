@@ -56,12 +56,12 @@ function AddWeaponSkinEntries(meshVariationDatabase)
 					variationDataTables[weaponName] = {}
 
 					-- Add a table to the array with relevant data for each weapon/camo combination (2 meshes/database entries per table).
-					for camoId, camoInfo in pairs(config) do
+					for index, camoInfo in ipairs(config) do
 					
-						local variationName = weaponName..'_'..camoId					-- Weapons/AEK971/AEK971_RU_PARTIZAN		
+						local variationName = weaponName..'_'..camoInfo.id					-- Weapons/AEK971/AEK971_RU_PARTIZAN		
 						local variationNameHash = MathUtils:FNVHash(variationName)
 
-						variationDataTables[weaponName][camoId] = 
+						variationDataTables[weaponName][index] = 
 						{ 
 							mesh1pEntry = nil,
 							mesh3pEntry = nil,
@@ -96,7 +96,7 @@ function AddWeaponSkinEntries(meshVariationDatabase)
 
 	for weaponName, weaponVariations in pairs(variationDataTables) do
 	
-		for _, variationData in pairs(weaponVariations) do
+		for _, variationData in ipairs(weaponVariations) do
 
 			meshVariationDatabase.entries:add(variationData.mesh1pEntry)
 			meshVariationDatabase.entries:add(variationData.mesh3pEntry)
@@ -158,7 +158,7 @@ function ModifyTextureParameters(databaseMaterial, textureName)
 	end
 end
 
-
+local sortedWeaponNames = {}
 local unlockAssets = {}
 local unlockPartsGuids = {}
 
@@ -167,30 +167,25 @@ Events:Subscribe('Level:RegisterEntityResources', function(levelData)
 	-- The unlockAssets only need to be created and added to customization once
 	if #unlockAssets == 0 then
 
+		-- Sort table keys so stuff gets added to the registry in the same order
+		for weaponName in pairs(variationDataTables) do table.insert(sortedWeaponNames, weaponName) end
+	    table.sort(sortedWeaponNames)
+
 		CreateUnlockAssets()
 
 		if SharedUtils:IsClientModule() then
 			-- CreateUnlockDescriptions()
 		end
-	end
-
-	-- Sort table keys so stuff gets added to the registry in the same order
-   	local sortedWeaponNames = {}
-    for weaponName in pairs(variationDataTables) do table.insert(sortedWeaponNames, weaponName) end
-    table.sort(sortedWeaponNames)
-
-    local sortedCamoIds = {}
-	for id in pairs(config) do table.insert(sortedCamoIds, id) end
-	table.sort(sortedCamoIds)
+	end   
 
 	-- Add custom UnlockAssets to a registry
 	local registry = RegistryContainer()
 
 	for _, weaponName in ipairs(sortedWeaponNames) do
 
-		for _, camoId in ipairs(sortedCamoIds) do
+		for index, camoInfo in ipairs(config) do
 
-			local data = unlockAssets[weaponName][camoId]
+			local data = unlockAssets[weaponName][index]
 
 			registry.assetRegistry:add(data.unlockAsset)
 			registry.assetRegistry:add(data.variation)
@@ -204,6 +199,8 @@ Events:Subscribe('Level:RegisterEntityResources', function(levelData)
 end)
 
 function CreateUnlockAssets()
+
+	local defaultCamoUnlock = UnlockAsset(ResourceManager:SearchForDataContainer("Weapons/Common/DefaultCamo"))
 
 	for weaponName, weaponVariations in pairs(variationDataTables) do
 
@@ -225,19 +222,22 @@ function CreateUnlockAssets()
 
 		-- Custom CustomizationUnlockParts to replace the vanilla one
 		local customUnlockParts	= CustomizationUnlockParts()
+		customUnlockParts.selectableUnlocks:add(defaultCamoUnlock)
 
-		for camoId, variationData in pairs(weaponVariations) do
+		for index, camoInfo in ipairs(config) do
+
+			local variationData = variationDataTables[weaponName][index]
 
 			local objectVariation = ObjectVariation(MathUtils:RandomGuid())
 			objectVariation.name = variationData.variationName
 			objectVariation.nameHash = variationData.variationNameHash
 
-			local unlock = CreateCustomUnlock(weaponName, camoId, soldierWeaponBlueprint, objectVariation)
+			local unlock = CreateCustomUnlock(weaponName, camoInfo.id, soldierWeaponBlueprint, objectVariation)
 
 			customUnlockParts.selectableUnlocks:add(unlock)
 			customizationPartition:AddInstance(unlock)
 
-			unlockAssets[weaponName][camoId] = { unlockAsset = unlock, variation = objectVariation }
+			unlockAssets[weaponName][index] = { unlockAsset = unlock, variation = objectVariation }
 		end
 
 		-- Replace vanilla unlockParts
