@@ -30,6 +30,8 @@ end)
 
 function AddWeaponSkinEntries(meshVariationDatabase)
 
+	--print("Iterating MeshVariationDatabase")
+
 	-- Iterate all entries in the gamemodes MeshVariationDatabase
 	for index, entry in pairs(meshVariationDatabase.entries) do
 
@@ -165,7 +167,7 @@ local unlockPartsGuids = {}
 Events:Subscribe('Level:RegisterEntityResources', function(levelData)
 
 	-- The unlockAssets only need to be created and added to customization once
-	if #unlockAssets == 0 then
+	if #sortedWeaponNames == 0 then
 
 		-- Sort table keys so stuff gets added to the registry in the same order
 		for weaponName in pairs(variationDataTables) do table.insert(sortedWeaponNames, weaponName) end
@@ -176,7 +178,9 @@ Events:Subscribe('Level:RegisterEntityResources', function(levelData)
 		if SharedUtils:IsClientModule() then
 			-- CreateUnlockDescriptions()
 		end
-	end   
+	end
+
+	--print("Creating RegistryContainer")
 
 	-- Add custom UnlockAssets to a registry
 	local registry = RegistryContainer()
@@ -199,6 +203,8 @@ Events:Subscribe('Level:RegisterEntityResources', function(levelData)
 end)
 
 function CreateUnlockAssets()
+
+	--print("Creating UnlockAssets")
 
 	local defaultCamoUnlock = UnlockAsset(ResourceManager:SearchForDataContainer("Weapons/Common/DefaultCamo"))
 

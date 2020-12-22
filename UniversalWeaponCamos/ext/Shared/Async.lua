@@ -51,6 +51,7 @@ function Async:OnEngineUpdate(p_Delta)
 			coroutine.resume(task.coroutine)
 		end
 		if (task.state == AsyncState.Running) then -- Task is already running I guess
+			-- print("Running task")
 			coroutine.resume(task.coroutine)
 			task.time = task.time + p_Delta
 		end

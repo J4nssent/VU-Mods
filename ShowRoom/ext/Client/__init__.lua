@@ -34,6 +34,11 @@ Hooks:Install('UI:PushScreen', 999, function(hook, screen, graphPriority, parent
 	-- Cast the screen to access its properties.
 	screen = UIGraphAsset(screen)
 
+	-- Don't unsubscribe when opening or closing chat
+	if screen.name == "UI/Flow/Screen/Chat/ChatScreen" or screen.name == "UI/Flow/Screen/EmptyScreen" then
+		return
+	end
+
 	-- Only subscribe to the update events when in a customization screen
 	if screen.name:starts('UI/Flow/Screen/Customize') then
 
@@ -89,6 +94,10 @@ Hooks:Install('UI:PushScreen', 999, function(hook, screen, graphPriority, parent
 	end
 end)
 
+Events:Subscribe('Level:Destroy', function()
+	uiCompData = nil
+	defaultData = nil
+end)
 
 local previousPosition = Vec2()
 local pendingRotation = 0
