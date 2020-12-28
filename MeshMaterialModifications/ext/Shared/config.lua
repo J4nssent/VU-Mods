@@ -186,16 +186,6 @@ local config = {
 return config
 
 --[[
-Look at vanilla meshes and materials to find out what vector and texture parameters can be used for a shader.
-A dump of the VectorShaderParameters and the shaders they're used with can be found in the mod folder.
-
-Textures in Weapon_ShaderStateAssets can only be replaced with other textures from Weapon_ShaderStateAssets (no ClothCamo textures f.e.)
-
-ParameterModificationType.ReplaceParameters will clear the MeshVariationDatabaseMaterial.textureParameters array.
-Just clearing this array causes a crash, instead, the MeshVariationDatabaseMaterial is replaced with a new MeshVariationDatabaseMaterial, and the original MeshMaterial is assigned to it.
-
-
-
 	[<MeshAsset_Guid>] = {
 		VARIATION_HASH = <ObjectVariationHash> (defaults to 0 if not specified)
 		MATERIALS = 
@@ -216,4 +206,17 @@ Just clearing this array causes a crash, instead, the MeshVariationDatabaseMater
 			}
 		}
 	},
+
+ModifyParameters		-- Modifies parameters if they exist.
+ModifyOrAddParameters		-- Modifies parameters if they exist, adds them if they don't.
+ReplaceParameters		-- Clears existing parameters and adds the specified parameters.
+
+Look at vanilla meshes and materials to find out what vector and texture parameters can be used for a shader.
+A dump of the VectorShaderParameters and the shaders they're used with can be found in the mod folder.
+
+Textures in Weapon_ShaderStateAssets can only be replaced with other textures from Weapon_ShaderStateAssets (no ClothCamo textures f.e.)
+
+ParameterModificationType.ReplaceParameters will clear the MeshVariationDatabaseMaterial.textureParameters array.
+Just clearing this array causes a crash, instead, the MeshVariationDatabaseMaterial is replaced with a new MeshVariationDatabaseMaterial, and the original MeshMaterial is assigned to it.
+
 --]]
