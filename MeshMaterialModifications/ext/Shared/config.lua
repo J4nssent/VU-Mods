@@ -186,115 +186,34 @@ local config = {
 return config
 
 --[[
-Changes to a MeshMaterial's shader name or parameters don't appear to have an effect. 
-If SHADER.REPLACE is set, the MeshVariationDatabaseMaterial's MeshMaterial will be replaced with a new MeshMaterial instance.
+Look at vanilla meshes and materials to find out what vector and texture parameters can be used for a shader.
+A dump of the VectorShaderParameters and the shaders they're used with can be found in the mod folder.
 
-If a shader name is specified, shader will be replaced regardless of what SHADER.REPLACE is set to. 
-If SHADER.REPLACE is set, the existing VectorParameters will be lost (so you have to include all parameters, not just those that should be modified)
+Textures in Weapon_ShaderStateAssets can only be replaced with other textures from Weapon_ShaderStateAssets (no ClothCamo textures f.e.)
 
-Look at vanilla meshes and materials to find out what shader parameters can be used for a shader or what texture parameters work for a material
-
-Textures in Weapon_ShaderStateAssets can only be replaced with other textures from Weapon_ShaderStateAssets (no ClothCamo textures)
-
-If TEXTURES.REPLACE is set, MeshVariationDatabaseMaterial.textureParameters gets cleared.
-If defined, new TextureShaderParameters are created and added to the textureParameters array, this causes a crash.
-Workaround is to replace the MeshVariationDatabaseMaterial with a new MeshVariationDatabaseMaterial struct (and copy over material).
+ParameterModificationType.ReplaceParameters will clear the MeshVariationDatabaseMaterial.textureParameters array.
+Just clearing this array causes a crash, instead, the MeshVariationDatabaseMaterial is replaced with a new MeshVariationDatabaseMaterial, and the original MeshMaterial is assigned to it.
 
 
 
 	[<MeshAsset_Guid>] = {
-		[<MeshMaterial_Index>] = {
-			SHADER = {
-				REPLACE = <CreateNewMeshMaterial_bool>
-				NAME = <ShaderAsset_Name>,
-				PARAMETERS = {
-					<VectorShaderParameterName> = { TYPE = <ParameterType>, VALUE = <Value_Vec4> }
-				}
-			},
-			TEXTURES = {
-				REPLACE = <ClearExistingParameters_bool>
-				PARAMETERS = {
-					<TextureShaderParameterName> = <TextureAsset_Name>,
+		VARIATION_HASH = <ObjectVariationHash> (defaults to 0 if not specified)
+		MATERIALS = 
+			[<MeshMaterial_Index>] = {
+				SHADER = {
+					TYPE = <ParameterModificationType>,
+					NAME = <ShaderGraph_Name>,
+					PARAMETERS = {
+						<VectorShaderParameter_parameterName> = { TYPE = <ShaderParameterType>, VALUE = <Vec4> }
+					}
+				},
+				TEXTURES = {
+					TYPE = <ParameterModificationType>,
+					PARAMETERS = {
+						<TextureShaderParameter_parameterName> = <TextureAsset_Name>,
+					}
 				}
 			}
 		}
 	},
-
-						ScratchTiling = Vec4(0.0, 0.0, 0.0, 0.0),
-						CamoBrightness = { VALUE = Vec4(0, 0, 0, 0), TYPE = ShaderParameterType.ShaderParameterType_Color },
-						CamoBrightness = { VALUE = Vec4(0, 0, 0, 0), TYPE = ShaderParameterType.ShaderParameterType_Color },
-						ScatchAmount = { VALUE = Vec4(0, 0, 0, 0), TYPE = ShaderParameterType.ShaderParameterType_Scalar },
-						SmoothnessMasked = { VALUE = Vec4(0, 0, 0, 0), TYPE = ShaderParameterType.ShaderParameterType_Scalar },
-						SmoothnessRegular = { VALUE = Vec4(1, 0, 0, 0), TYPE = ShaderParameterType.ShaderParameterType_Scalar },
-						SmoothnessWear = { VALUE = Vec4(1, 0, 0, 0), TYPE = ShaderParameterType.ShaderParameterType_Scalar },
-						SpecularBrightness = { VALUE = Vec4(2, 0, 0, 0), TYPE = ShaderParameterType.ShaderParameterType_Scalar },
-						WearAmount = { VALUE = Vec4(0, 0, 0, 0), TYPE = ShaderParameterType.ShaderParameterType_Scalar },
-						WearPower = { VALUE = Vec4(10, 0, 0, 0), TYPE = ShaderParameterType.ShaderParameterType_Scalar },
-
---]]
-
---[[
-MeshVariationDatabaseEntry 3C489F07-9F95-F721-33D9-20B96090AD21
-    $::DataContainer
-    Mesh weapons/m240/m240_bipods_3p_Mesh/7FA64A64-F204-8A4B-0956-5F8027D32CB3
-    VariationAssetNameHash 0
-    Materials::array
-        member(0)::MeshVariationDatabaseMaterial
-            Material weapons/m240/m240_bipods_3p_Mesh/65B8181A-543E-F3DD-280A-D20154831933
-            MaterialVariation *nullGuid*
-            TextureParameters::array
-                member(0)::TextureShaderParameter
-                    ParameterName Camo
-                    Value Weapons/Textures/Dust_D/D0E10743-790A-1CF4-A129-DB1D42710F31
-                member(1)::TextureShaderParameter
-                    ParameterName Diffuse
-                    Value Weapons/M240/M240_D/2E25B6D5-34AB-3464-98E3-E0F42E5400EF
-                member(2)::TextureShaderParameter
-                    ParameterName Specular
-                    Value Weapons/M240/M240_S/A1C44010-2245-8460-2D4A-107B9645C3E5
-
-A MeshMaterial is basically a SurfaceShader Struct with Shader instance and parameters
-
-MeshMaterial 65B8181A-543E-F3DD-280A-D20154831933
-    $::DataContainer
-    ShaderInstance *nullGuid*
-    Shader::SurfaceShaderInstanceDataStruct
-        Shader Weapons/Shaders/WeaponPreset3P/8D89EDAD-D2B1-4BB9-B36C-1498F76C8C8B
-        BoolParameters *nullArray*
-        VectorParameters::array
-            member(0)::VectorShaderParameter
-                ParameterName Emissive
-                ParameterType ShaderParameterType_Color
-                Value::Vec4
-                    x 0.00700000021607
-                    y 0.00700000021607
-                    z 0.00700000021607
-                    w 0.00700000021607
-            member(1)::VectorShaderParameter
-                ParameterName WearAmount
-                ParameterType ShaderParameterType_Scalar
-                Value::Vec4
-                    x 25.0
-                    y 0.0
-                    z 0.0
-                    w 0.0
-            member(2)::VectorShaderParameter
-                ParameterName WearPower
-                ParameterType ShaderParameterType_Scalar
-                Value::Vec4
-                    x 0.0
-                    y 0.0
-                    z 0.0
-                    w 0.0
-        VectorArrayParameters *nullArray*
-        TextureParameters *nullArray*
-
-
-ShaderGraph 8D89EDAD-D2B1-4BB9-B36C-1498F76C8C8B #primary instance
-    $::SurfaceShaderBaseAsset
-        $::Asset
-            $::DataContainer
-            Name Weapons/Shaders/WeaponPreset3P
-    MaxSubMaterialCount 8
-    GammaCorrectionEnable True
 --]]
