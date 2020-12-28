@@ -38,7 +38,6 @@ local SMOOTH_PINK_CAMO_LAND_MATERIAL = {
 	}
 }
 
-
 local SMOOTH_PINK_CAMO_AIR_MATERIAL = {
 	SHADER = {
 		TYPE = ParameterModificationType.ModifyOrAddParameters,
@@ -46,7 +45,7 @@ local SMOOTH_PINK_CAMO_AIR_MATERIAL = {
 			NO_WEAR_SHADER_PARAMETERS, {
 			CamoBrightness = { VALUE = Vec4(1, 0, 0.8, 0), TYPE = ShaderParameterType.ShaderParameterType_Color },
 			CamoTiling = { VALUE = Vec4(2, 2, 0, 0), TYPE = ShaderParameterType.ShaderParameterType_Vec2 },
-			}, 
+			}
 		)
 	},
 	TEXTURES = {
@@ -77,7 +76,6 @@ local BLACK_M16_CONFIG = {
 	MATERIALS = {
 		[2] = { TEXTURES = BLACK_CAMO_TEXTURE },
 		[4] = { TEXTURES = BLACK_CAMO_TEXTURE }
-		}
 	}
 }
 
@@ -136,7 +134,6 @@ local config = {
 			}
 		}
 	},
-
 
 	-- SILVER/GLASS MEDKIT
 	-- weapons/gadgets/medicbag/mediccrate_projectile_Mesh
@@ -218,5 +215,4 @@ Textures in Weapon_ShaderStateAssets can only be replaced with other textures fr
 
 ParameterModificationType.ReplaceParameters will clear the MeshVariationDatabaseMaterial.textureParameters array.
 Just clearing this array causes a crash, instead, the MeshVariationDatabaseMaterial is replaced with a new MeshVariationDatabaseMaterial, and the original MeshMaterial is assigned to it.
-
 --]]
