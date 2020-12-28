@@ -20,7 +20,7 @@ local BLACK_CAMO_TEXTURE = {
 }
 
 -- CUSTOM MATERIAL CONFIGS
-local SMOOTH_PINK_CAMO_LAND_MATERIAL = {
+local SMOOTH_BLACK_CAMO_LAND_MATERIAL = {
 	SHADER = {
 		TYPE = ParameterModificationType.ModifyOrAddParameters,
 		PARAMETERS = mergeTables(
@@ -82,7 +82,7 @@ local BLACK_M16_CONFIG = {
 
 local config = {
 	
-	-- JUNGLE LAV -------------------------------------------------------------------------------------
+	-- JUNGLE LAV ---------------------------------------------------------------------------------------------
 	-- vehicles/lav25/lav25_Mesh
 	['651E110D-9DD1-F900-658E-18504BD8ABF1'] = {
 		MATERIALS = {
@@ -135,7 +135,7 @@ local config = {
 		}
 	},
 
-	-- SILVER/GLASS MEDKIT
+	-- SILVER/GLASS MEDKIT ------------------------------------------------------------------------------------
 	-- weapons/gadgets/medicbag/mediccrate_projectile_Mesh
 	['BC6154A0-CDFC-D402-ECCA-444811062765'] = {
 		MATERIALS = {
@@ -148,7 +148,7 @@ local config = {
 		}
 	},
 
-	-- PINK SHINY HUMVEE -------------------------------------------------------------------------------------
+	-- BLACK SHINY HUMVEE -------------------------------------------------------------------------------------
 	-- vehicles/humveearmored/humveearmored_Mesh
 	['1EF65CDB-ABED-FD37-6E17-BE3D2C497B05'] = {
 		MATERIALS = {
@@ -157,7 +157,7 @@ local config = {
 		}
 	},
 
-	-- PINK SHINY Z11 -------------------------------------------------------------------------------------
+	-- PINK SHINY Z11 -----------------------------------------------------------------------------------------
 	-- vehicles/z11w/z-11w_Mesh
 	['D780B071-38B7-11DE-BF1C-984D9AEE762C'] = {
 		MATERIALS = {
