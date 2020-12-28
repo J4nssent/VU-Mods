@@ -1,0 +1,874 @@
+ShaderGraph names and the VectorShaderParameter parameterNames that are used for them in vanilla.
+
+XP3_Desert:
+
+Vehicles/Shaders/VehiclePreset_Jet_Decals
+    WearAmount    ShaderParameterType_Scalar
+    SmoothnessWear    ShaderParameterType_Scalar
+    CamoBrightness    ShaderParameterType_Color
+    ScratchTiling    ShaderParameterType_Vec2
+    SmoothnessMasked    ShaderParameterType_Scalar
+    ScatchAmount    ShaderParameterType_Scalar
+    SmoothnessRegular    ShaderParameterType_Scalar
+    WearPower    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    CamoBOffset    ShaderParameterType_Vec3
+Objects/Shaders/PropPreset_Metal
+    FresnelExponent    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+    SmoothnessScale    ShaderParameterType_Scalar
+    FresnelBias    ShaderParameterType_Scalar
+Vehicles/Shaders/VehiclePreset_Wreckage_1uv
+    WearAmount    ShaderParameterType_Scalar
+Vehicles/Shaders/VehiclePreset_Wreckage
+    WearAmount    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    Smoothness    ShaderParameterType_Scalar
+    WearPower    ShaderParameterType_Scalar
+    BurnedColor    ShaderParameterType_Color
+Vehicles/XPack01/Shaders/VehiclePreset_Wreckage
+    BurnedColor    ShaderParameterType_Color
+Objects/Vegetation/Shaders/VegetationTranslucentVertexLODPreset
+    Colorvariation    ShaderParameterType_Color
+Objects/Container_01/Container_01_Metal
+    MainColor    ShaderParameterType_Color
+    DecalColor    ShaderParameterType_Color
+Objects/Shaders/PropPreset_AlphaTest
+    SmoothnessScale    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+Objects/Rocks_01/Rock_01c_main
+    SpecularScale    ShaderParameterType_Scalar
+Weapons/Shaders/Zoom_Glass
+    Dist    ShaderParameterType_Scalar
+    Fade    ShaderParameterType_Scalar
+    Color4    ShaderParameterType_Color
+Objects/Shaders/PropPreset_NoSpec
+    SpecularScale    ShaderParameterType_Scalar
+    SmoothnessScale    ShaderParameterType_Scalar
+    FresnelBias    ShaderParameterType_Scalar
+Vehicles/Shaders/VehiclePreset_Jet_LOD
+    WearAmount    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    SmoothnessWear    ShaderParameterType_Scalar
+    CamoBrightness    ShaderParameterType_Color
+    SmoothnessRegular    ShaderParameterType_Scalar
+    ScratchTiling    ShaderParameterType_Vec2
+    SmoothnessMasked    ShaderParameterType_Scalar
+shaders/Root/CharacterRoot_1P
+    DetailTexture_RTile    ShaderParameterType_Scalar
+    SmoothnessScale    ShaderParameterType_Scalar
+    DetailTexture_Btile    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+    DetailTexture_GTile    ShaderParameterType_Scalar
+Weapons/Shaders/Glass_Base
+    Opacity    ShaderParameterType_Color
+    Fade    ShaderParameterType_Scalar
+    Color    ShaderParameterType_Color
+    Dist    ShaderParameterType_Scalar
+    Specular    ShaderParameterType_Color
+    Diffuse    ShaderParameterType_Color
+Objects/PressureTank_01/SS_PressureTank_ruin
+    Color    ShaderParameterType_Color
+Weapons/Shaders/Scope_HUD_Preset
+    OpacityMod    ShaderParameterType_Scalar
+    Color    ShaderParameterType_Vec3
+Weapons/Shaders/WeaponPreset3P
+    WearAmount    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    DiffuseDarkening    ShaderParameterType_Color
+    WearPower    ShaderParameterType_Scalar
+    CamoDarkening    ShaderParameterType_Color
+    Emissive    ShaderParameterType_Color
+Architecture/Shaders/FacadePresetInterior_DestrVolume_ColorControl
+    FresnelExponent    ShaderParameterType_Scalar
+    FresnelBias    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+    ColorControl    ShaderParameterType_Color
+Objects/PressureTank_01/SS_PressureTank_02_UVmoved
+    Color    ShaderParameterType_Color
+Weapons/Shaders/Red_glow
+    TapeColor    ShaderParameterType_Color
+Shaders/Presets/OLD_PropPreset
+    FakeSpecColor    ShaderParameterType_Color
+    Roughness    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+    SpecularMultiplier    ShaderParameterType_Scalar
+    Smoothness    ShaderParameterType_Scalar
+Weapons/XP4_Crossbow_Prototype/Preset_Metal_xp4
+    SmoothnessMasked    ShaderParameterType_Scalar
+    SmoothnessRegular    ShaderParameterType_Scalar
+Vehicles/Shaders/VehiclePreset_Mud_LOD
+    WearAmount    ShaderParameterType_Scalar
+    SmoothnessWear    ShaderParameterType_Scalar
+    CamoBrightness    ShaderParameterType_Color
+    ScratchTiling    ShaderParameterType_Vec2
+    SmoothnessMasked    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    DiffuseBrighness    ShaderParameterType_Color
+    WearPower    ShaderParameterType_Scalar
+    SpecularBrightness    ShaderParameterType_Scalar
+    ScatchAmount    ShaderParameterType_Scalar
+    SmoothnessRegular    ShaderParameterType_Scalar
+Weapons/Shaders/WeaponPresetShadowFP_xp2
+    WearAmount    ShaderParameterType_Scalar
+    SmoothnessWear    ShaderParameterType_Scalar
+    CamoDarkening    ShaderParameterType_Color
+    ScratchTiling    ShaderParameterType_Vec2
+    SmoothnessMasked    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    DiffuseDarkening    ShaderParameterType_Color
+    WearPower    ShaderParameterType_Scalar
+    NormalTiling    ShaderParameterType_Vec2
+    SmoothnessRegular    ShaderParameterType_Scalar
+Characters/UpperBody/SP_Pilot_Gear/SP_Pilot_Gear_Overlay
+    _SpecularScale    ShaderParameterType_Scalar
+Vehicles/Shaders/VehiclePreset_GlassOpaque_LOD
+    ColorTint    ShaderParameterType_Color
+Objects/Vegetation/Shaders/VegetationTranslucentVertexPreset
+    Colorvariation    ShaderParameterType_Color
+Shaders/Root/CharacterRoot_AlphaTest
+    SpecScale    ShaderParameterType_Color
+    AlphaScale    ShaderParameterType_Color
+Weapons/Shaders/Aimingdots
+    TapeColor    ShaderParameterType_Color
+Weapons/Shaders/Black_Tape
+    TapeColor    ShaderParameterType_Color
+FX/Meshparticles/Weapons/762mmLink_Shader
+    ColorModifier    ShaderParameterType_Color
+    SpecModifier    ShaderParameterType_Color
+Architecture/Shaders/PropPreset2UVsColorMask
+    SmoothnessMultiplier    ShaderParameterType_Scalar
+    SmoothnessPower    ShaderParameterType_Scalar
+    Color    ShaderParameterType_Color
+    TileValueTexCoord1    ShaderParameterType_Scalar
+    SpecMultiplier    ShaderParameterType_Scalar
+XP_Raw/_CommonTextures/_House_PaintedPlaster_01
+    BaseColor    ShaderParameterType_Color
+    DetailColor    ShaderParameterType_Color
+    PaintColor    ShaderParameterType_Color
+    Spec_BaseDetailDirtPaint    ShaderParameterType_Vec4
+    ShaderParameters    ShaderParameterType_Vec4
+Objects/ServiceLamp_01/ServiceLamp_02_Shader
+    Color    ShaderParameterType_Color
+XP_Raw/_CommonTextures/Shaders/FacadePreset_Clusters
+    SpecularScale    ShaderParameterType_Scalar
+Shaders/Root/CharacterRoot_LOD_XP4
+    CamoTileFactor    ShaderParameterType_Scalar
+shaders/Root/CharacterRoot_Eye_Simple
+    Color    ShaderParameterType_Color
+Vehicles/Common/Kits/Kits
+    Brightness    ShaderParameterType_Scalar
+shaders/Root/CharacterRoot_XP4
+    _DirtScaleMax    ShaderParameterType_Scalar
+    _DirtColor    ShaderParameterType_Color
+    CamoTileFactor    ShaderParameterType_Scalar
+Vehicles/Shaders/VehiclePreset_Jet_Wreckage
+    WearAmount    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    WearPower    ShaderParameterType_Scalar
+    SmoothnessRegular    ShaderParameterType_Scalar
+    CamoBOffset    ShaderParameterType_Vec3
+Vehicles/XPack01/Shaders/VehiclePreset_MudScratches
+    ScatchAmount    ShaderParameterType_Scalar
+    ScratchTiling    ShaderParameterType_Vec2
+    SmoothnessMax    ShaderParameterType_Scalar
+Vehicles/Shaders/VehiclePreset1UvSet_Mud_Decals
+    WearAmount    ShaderParameterType_Scalar
+    ScatchAmount    ShaderParameterType_Scalar
+    CamoBrightness    ShaderParameterType_Color
+Vehicles/Shaders/VehiclePreset1UvSet_Mud_AllCamo
+    WearAmount    ShaderParameterType_Scalar
+    ScatchAmount    ShaderParameterType_Scalar
+    CamoBrightness    ShaderParameterType_Color
+    WearPower    ShaderParameterType_Scalar
+    ScratchTiling    ShaderParameterType_Vec2
+Vehicles/Shaders/WreckInteriorDetail_1UvSet
+    BurnedTextureTiling    ShaderParameterType_Vec2
+Vehicles/Shaders/VehiclePreset_Wreckage_1UvSet
+    WearAmount    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+XP_Raw/Architecture/Edge_Models/Edge_Models_Destruction_Shader
+    DestrVolDetailAlphaInfluence    ShaderParameterType_Scalar
+    DestrVolEdgeThickness    ShaderParameterType_Scalar
+Objects/BorderFence_01/SS_Metalnet
+    TileValue    ShaderParameterType_Scalar
+Vehicles/XPack01/Shaders/VehiclePreset_LOD_reg
+    DiffuseBrighness    ShaderParameterType_Color
+    WearAmount    ShaderParameterType_Scalar
+Vehicles/XPack01/Shaders/VehiclePreset_Mud
+    WearAmount    ShaderParameterType_Scalar
+Vehicles/Shaders/VehiclePreset_Wreckage_LOD
+    Smoothness    ShaderParameterType_Scalar
+Weapons/Shaders/WeaponPresetShadowNoCamoFP
+    SmoothnessMasked    ShaderParameterType_Scalar
+    SmoothnessRegular    ShaderParameterType_Scalar
+    NormalTiling    ShaderParameterType_Vec2
+    DiffuseDarkening    ShaderParameterType_Color
+Vehicles/Shaders/VehiclePreset_GlassOpaque
+    ColorTint    ShaderParameterType_Color
+Vehicles/Shaders/VehiclePreset_Mud_Decals
+    WearAmount    ShaderParameterType_Scalar
+    SmoothnessWear    ShaderParameterType_Scalar
+    CamoBrightness    ShaderParameterType_Color
+    ScratchTiling    ShaderParameterType_Vec2
+    SmoothnessMasked    ShaderParameterType_Scalar
+    ScatchAmount    ShaderParameterType_Scalar
+    WearPower    ShaderParameterType_Scalar
+    SpecularBrightness    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    SmoothnessRegular    ShaderParameterType_Scalar
+Objects/CeilingLight_02/SS_CeilingLight_02_ON
+    Color    ShaderParameterType_Color
+Objects/Shaders/PropPreset
+    FresnelExponent    ShaderParameterType_Scalar
+    FresnelBias    ShaderParameterType_Scalar
+    SmoothnessScale    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+Weapons/Shaders/Projectile_Preset
+    Emissive    ShaderParameterType_Color
+Objects/GasStation_01/GasStation_01_Sign_Main
+    SpecularScale    ShaderParameterType_Scalar
+    EmissiveColor    ShaderParameterType_Color
+Vehicles/Shaders/VehiclePreset_noMud
+    WearAmount    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    WearPower    ShaderParameterType_Scalar
+    ScratchTiling    ShaderParameterType_Vec2
+    SmoothnessRegular    ShaderParameterType_Scalar
+Vehicles/Shaders/VehiclePreset_MissileRack
+    SmoothnessMultiplier    ShaderParameterType_Scalar
+    SpecularMultiplier    ShaderParameterType_Scalar
+    Color    ShaderParameterType_Color
+shaders/presets/OLD_PropPreset_Metal
+    ReflectionMultiplier    ShaderParameterType_Scalar
+    DamageAmount    ShaderParameterType_Scalar
+Shaders/Root/CharacterRoot_Skin
+    _SmoothnessOuter    ShaderParameterType_Color
+    _SmoothnessInner    ShaderParameterType_Color
+    _SpecularScale    ShaderParameterType_Color
+    _DirtIntensity    ShaderParameterType_Color
+    _SpecularOuter    ShaderParameterType_Color
+shaders/Root/CharacterRoot_LOD
+    DirtFactor    ShaderParameterType_Scalar
+    CamoTileFactor    ShaderParameterType_Scalar
+    HeatScale    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+    ScratchScale    ShaderParameterType_Scalar
+    DiffuseScale    ShaderParameterType_Scalar
+shaders/Root/CharacterRoot
+    _DirtScaleMax    ShaderParameterType_Scalar
+    _ClothTile    ShaderParameterType_Scalar
+    HeatScale    ShaderParameterType_Scalar
+    ClothTileFactor    ShaderParameterType_Scalar
+    _DirtScaleMin    ShaderParameterType_Scalar
+    _RimLightScale    ShaderParameterType_Scalar
+    _SmoothnessScale    ShaderParameterType_Scalar
+    _ScratchScale    ShaderParameterType_Scalar
+    DirtFactor    ShaderParameterType_Scalar
+    SpecScale    ShaderParameterType_Scalar
+    _SpecularScale    ShaderParameterType_Scalar
+    CamoTileFactor    ShaderParameterType_Scalar
+    _DirtColor    ShaderParameterType_Color
+Vehicles/Shaders/VehiclePreset1UvSet_Mud
+    WearAmount    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    SpecularBrightness    ShaderParameterType_Scalar
+    CamoBrightness    ShaderParameterType_Color
+    ScratchTiling    ShaderParameterType_Vec2
+    WearPower    ShaderParameterType_Scalar
+    DiffuseBrighness    ShaderParameterType_Color
+    ScatchAmount    ShaderParameterType_Scalar
+Vehicles/Shaders/VehiclePreset_Glass
+    OpacityMultiplier    ShaderParameterType_Scalar
+    MaxOpacity    ShaderParameterType_Scalar
+    ColorTint    ShaderParameterType_Color
+    MinOpacity    ShaderParameterType_Scalar
+Vehicles/Shaders/VehiclePreset_Jet
+    WearAmount    ShaderParameterType_Scalar
+    SmoothnessWear    ShaderParameterType_Scalar
+    CamoBrightness    ShaderParameterType_Color
+    ScratchTiling    ShaderParameterType_Vec2
+    SmoothnessMasked    ShaderParameterType_Scalar
+    ScatchAmount    ShaderParameterType_Scalar
+    SmoothnessRegular    ShaderParameterType_Scalar
+    WearPower    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    CamoBOffset    ShaderParameterType_Vec3
+Objects/Shaders/PropPreset_DestrVolume
+    SmoothnessScale    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+Objects/Shaders/CarpaintPreset
+    DColor    ShaderParameterType_Color
+    CoatColor    ShaderParameterType_Color
+    SmoothScale    ShaderParameterType_Scalar
+    EdgeColor    ShaderParameterType_Color
+Weapons/Shaders/Bullets_Base
+    ColorBullet    ShaderParameterType_Color
+    SaturationBullet    ShaderParameterType_Color
+    BulletSmoothness    ShaderParameterType_Color
+Props/Shaders/OLDPropPreset_Metal
+    Smoothness    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+Objects/IranFence_01/IranFence_Preset
+    PaintColor    ShaderParameterType_Color
+    MetalPaintConcreteSmoothness    ShaderParameterType_Vec4
+XP_Raw/_CommonTextures/_House_PaintedPlaster_01_Destruction
+    DirtColor    ShaderParameterType_Color
+    BaseColor    ShaderParameterType_Color
+    Spec_BaseDetailDirtPaint    ShaderParameterType_Vec4
+    DestrVolDetailAlphaInfluence    ShaderParameterType_Scalar
+    PaintColor    ShaderParameterType_Color
+    ShaderParameters    ShaderParameterType_Vec4
+    DetailColor    ShaderParameterType_Color
+Vehicles/Shaders/VehiclePreset_Mud
+    WearAmount    ShaderParameterType_Scalar
+    SmoothnessWear    ShaderParameterType_Scalar
+    CamoBrightness    ShaderParameterType_Color
+    ScratchTiling    ShaderParameterType_Vec2
+    SmoothnessMasked    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    WearPower    ShaderParameterType_Scalar
+    SpecularBrightness    ShaderParameterType_Scalar
+    ScatchAmount    ShaderParameterType_Scalar
+    SmoothnessRegular    ShaderParameterType_Scalar
+Weapons/Shaders/WeaponPresetNoCamo3P
+    DiffuseDarkening    ShaderParameterType_Color
+Objects/Shaders/PropPreset_MetalNoSpecular
+    FresnelExponent    ShaderParameterType_Scalar
+    FresnelBias    ShaderParameterType_Scalar
+    SmoothnessScale    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+Architecture/Shaders/FacadePreset2UVs
+    TileValue    ShaderParameterType_Scalar
+Objects/BorderFence_01/SS_BorderFence_Metal
+    Color    ShaderParameterType_Color
+Objects/Shaders/PropPreset_DiffuseOnly
+    SmoothnessScale    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+Weapons/Shaders/WeaponPresetShadowFP
+    Emissive    ShaderParameterType_Color
+    SmoothnessWear    ShaderParameterType_Scalar
+    DiffuseDarkening    ShaderParameterType_Color
+    ScratchTiling    ShaderParameterType_Vec2
+    SmoothnessMasked    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    CamoDarkening    ShaderParameterType_Color
+    SmoothnessRegular    ShaderParameterType_Scalar
+    WearPower    ShaderParameterType_Scalar
+    WearAmount    ShaderParameterType_Scalar
+    NormalTiling    ShaderParameterType_Vec2
+Architecture/FacadeClusters/FacadeCluster_shader
+    Smoothness    ShaderParameterType_Scalar
+    SpecularMultiplier    ShaderParameterType_Scalar
+shaders/Root/CharacterRoot_AlphaBlend
+    AlphaScale    ShaderParameterType_Color
+    scratches    ShaderParameterType_Color
+    Smoothness    ShaderParameterType_Scalar
+    SpecScale    ShaderParameterType_Color
+    scratchTile    ShaderParameterType_Scalar
+    ColorMult    ShaderParameterType_Color
+Architecture/FacadeDecorations/Shaders/EdgeDec_shader_Normal
+    Smoothness    ShaderParameterType_Scalar
+    SpecularMultiplier    ShaderParameterType_Scalar
+    SpecularPower    ShaderParameterType_Scalar
+Weapons/Shaders/WeaponPresetFP
+    Emissive    ShaderParameterType_Color
+    SmoothnessWear    ShaderParameterType_Scalar
+    DiffuseDarkening    ShaderParameterType_Color
+    ScratchTiling    ShaderParameterType_Vec2
+    SmoothnessMasked    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    CamoDarkening    ShaderParameterType_Color
+    NormalTiling    ShaderParameterType_Vec2
+    WearPower    ShaderParameterType_Scalar
+    WearAmount    ShaderParameterType_Scalar
+    SmoothnessRegular    ShaderParameterType_Scalar
+XP_Raw/_CommonTextures/_HouseTemplateShader_01_Destruction
+    DestrVolDetailAlphaInfluence    ShaderParameterType_Scalar
+    ShaderParameters    ShaderParameterType_Vec4
+Shaders/Root/CharacterRoot_Eye
+    Color    ShaderParameterType_Color
+
+
+MP_001:
+
+Architecture/Shaders/PropPreset1UVsColorMask
+    SpecMultiplier    ShaderParameterType_Scalar
+    SmoothnessPower    ShaderParameterType_Scalar
+    SmoothnessMultiplier    ShaderParameterType_Scalar
+    NormalTile    ShaderParameterType_Scalar
+    Color    ShaderParameterType_Color
+Props/Shaders/OLD_PropPreset_Alphatest
+    Smoothness    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+Props/Vehicles/CivilianCar_04/CivilianCar_04_main
+    SpecMul1    ShaderParameterType_Scalar
+    SpecMul    ShaderParameterType_Scalar
+Objects/GarbageBag_01/SS_GarbageBag_01
+    Color    ShaderParameterType_Color
+Props/BuildingProps/WoodenWallShelf_01/PaintedWood
+    SpecMultiplier    ShaderParameterType_Scalar
+    SmoothnessMultiplier    ShaderParameterType_Scalar
+    SmoothnessPower    ShaderParameterType_Scalar
+    Color    ShaderParameterType_Color
+XP_Raw/Props/StoreSigns_01/StoreSign_01_Advert
+    DirtColor    ShaderParameterType_Color
+    EmissiveColor    ShaderParameterType_Color
+Vehicles/Shaders/VehiclePreset_GlassOpaque
+    ColorTint    ShaderParameterType_Color
+Test/Kenny_Test_LV01/CatwalkSystem_01/SS_Material_0
+    FakeEnv    ShaderParameterType_Color
+shaders/Root/CharacterRoot
+    _DirtColor    ShaderParameterType_Color
+    _ClothTile    ShaderParameterType_Scalar
+    CamoTileFactor    ShaderParameterType_Scalar
+    _DirtScaleMax    ShaderParameterType_Scalar
+    _DirtScaleMin    ShaderParameterType_Scalar
+    _RimLightScale    ShaderParameterType_Scalar
+    HeatScale    ShaderParameterType_Scalar
+    _ScratchScale    ShaderParameterType_Scalar
+    _SpecularScale    ShaderParameterType_Scalar
+    ClothTileFactor    ShaderParameterType_Scalar
+    _SmoothnessScale    ShaderParameterType_Scalar
+    DirtFactor    ShaderParameterType_Scalar
+Architecture/Shaders/FacadePreset1UV_DestrVolume
+    SpecularPower    ShaderParameterType_Scalar
+    TileValue    ShaderParameterType_Vec2
+Architecture/Shaders/FacadePresetParis_RoofInterior_DestrVolume
+    FresnelBias    ShaderParameterType_Scalar
+    FresnelExponent    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+    DestrVolEdgeThickness    ShaderParameterType_Scalar
+    Smoothness    ShaderParameterType_Scalar
+    DestrVolDetailAlphaInfluence    ShaderParameterType_Scalar
+Objects/PipeSystem_02/SS_PipeSystem_02
+    SmoothnessMultiplier    ShaderParameterType_Scalar
+shaders/Root/CharacterRoot_AlphaBlend
+    SpecScale    ShaderParameterType_Color
+    Smoothness    ShaderParameterType_Scalar
+    scratchTile    ShaderParameterType_Scalar
+    AlphaScale    ShaderParameterType_Color
+    scratches    ShaderParameterType_Color
+    ColorMult    ShaderParameterType_Color
+Architecture/Shaders/FacadePreset1UV
+    SpecularMultiplier    ShaderParameterType_Scalar
+    FresnelBias    ShaderParameterType_Scalar
+    FresnelExponent    ShaderParameterType_Scalar
+    SpecularPower    ShaderParameterType_Scalar
+    Smoothness    ShaderParameterType_Scalar
+    TileValue    ShaderParameterType_Vec2
+Objects/Shaders/PropPreset_MetalNoSpecular
+    SpecularScale    ShaderParameterType_Scalar
+    SmoothnessScale    ShaderParameterType_Scalar
+Architecture/Shaders/StorefrontPreset2UVs
+    SpecularMultiplier    ShaderParameterType_Scalar
+    FresnelBias    ShaderParameterType_Scalar
+    FresnelExponent    ShaderParameterType_Scalar
+    SpecularPower    ShaderParameterType_Scalar
+    TileValue    ShaderParameterType_Scalar
+Weapons/Shaders/Black_Tape
+    TapeColor    ShaderParameterType_Color
+Vehicles/Shaders/VehiclePreset1UvSet_Mud
+    CamoTiling    ShaderParameterType_Vec2
+    CamoBrightness    ShaderParameterType_Color
+    WearAmount    ShaderParameterType_Scalar
+    WearPower    ShaderParameterType_Scalar
+Objects/PlasticCrate_01/PlasticCrate_01_Shader
+    Color    ShaderParameterType_Color
+Objects/OilBarrel_01/OilBarrel_01_Main
+    PaintColor1    ShaderParameterType_Color
+    BaseColor    ShaderParameterType_Color
+    PaintColor2    ShaderParameterType_Color
+Weapons/Shaders/Projectile_Preset
+    Emissive    ShaderParameterType_Color
+Weapons/Shaders/Red_glow
+    TapeColor    ShaderParameterType_Color
+Architecture/ME_House01/_HouseTemplateShader_01_Destruction_VertDestrVolume
+    ShaderParameters    ShaderParameterType_Vec4
+    DetailDiffuseTint    ShaderParameterType_Color
+    DestrVolEdgeThickness    ShaderParameterType_Scalar
+    DestrVolDetailAlphaInfluence    ShaderParameterType_Scalar
+Architecture/FacadeClusters/FacadeCluster_shader
+    Smoothness    ShaderParameterType_Scalar
+    SpecularMultiplier    ShaderParameterType_Scalar
+Objects/Shaders/PropPreset_NoSpec
+    SpecularScale    ShaderParameterType_Scalar
+    SmoothnessScale    ShaderParameterType_Scalar
+Architecture/Shaders/FasadePreset1UV_color_DestrVolume
+    SpecularPower    ShaderParameterType_Scalar
+    TileValue    ShaderParameterType_Scalar
+    DestrVolDetailAlphaInfluence    ShaderParameterType_Scalar
+Weapons/Shaders/WeaponPresetShadowFP_xp2
+    ScratchTiling    ShaderParameterType_Vec2
+    CamoTiling    ShaderParameterType_Vec2
+    SmoothnessMasked    ShaderParameterType_Scalar
+    DiffuseDarkening    ShaderParameterType_Color
+    NormalTiling    ShaderParameterType_Vec2
+    WearAmount    ShaderParameterType_Scalar
+    SmoothnessRegular    ShaderParameterType_Scalar
+    CamoDarkening    ShaderParameterType_Color
+    SmoothnessWear    ShaderParameterType_Scalar
+    WearPower    ShaderParameterType_Scalar
+Shaders/Presets/OLD_PropPreset
+    SpecularMultiplier    ShaderParameterType_Scalar
+    FakeSpecColor    ShaderParameterType_Color
+    FresnelBias    ShaderParameterType_Scalar
+    FresnelExponent    ShaderParameterType_Scalar
+    SpecularPower    ShaderParameterType_Scalar
+    Smoothness    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+    Roughness    ShaderParameterType_Scalar
+Weapons/Shaders/WeaponPreset3P
+    DiffuseDarkening    ShaderParameterType_Color
+    WearAmount    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    CamoDarkening    ShaderParameterType_Color
+    Emissive    ShaderParameterType_Color
+    WearPower    ShaderParameterType_Scalar
+Vehicles/Shaders/VehiclePreset_Glass
+    OpacityMultiplier    ShaderParameterType_Scalar
+    ColorTint    ShaderParameterType_Color
+    MinOpacity    ShaderParameterType_Scalar
+    MaxOpacity    ShaderParameterType_Scalar
+Objects/Shaders/PropPreset
+    FresnelBias    ShaderParameterType_Scalar
+    SmoothnessScale    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+    FresnelExponent    ShaderParameterType_Scalar
+Architecture/Me_Storefronts/Shaders/FacadePreset2UVs_Destruction
+    SpecularMultiplier    ShaderParameterType_Scalar
+    SpecularPower    ShaderParameterType_Scalar
+    TileValue    ShaderParameterType_Scalar
+    DestrVolEdgeThickness    ShaderParameterType_Scalar
+FX/Meshparticles/Weapons/762mmLink_Shader
+    ColorModifier    ShaderParameterType_Color
+    SpecModifier    ShaderParameterType_Color
+Shaders/Presets/StoreSignPreset
+    BackgroundScaling    ShaderParameterType_Vec2
+    Smoothness    ShaderParameterType_Scalar
+    MainColor    ShaderParameterType_Color
+    SecondaryColor    ShaderParameterType_Color
+Animations/Characters/SP/Shared/Objects/Cloths/Flags/FlagPoleSmall_Shader
+    Flag3    ShaderParameterType_Color
+    Flag1    ShaderParameterType_Color
+    Flag2    ShaderParameterType_Color
+Weapons/Shaders/Bullets_Base
+    SaturationBullet    ShaderParameterType_Color
+    BulletSmoothness    ShaderParameterType_Color
+    ColorBullet    ShaderParameterType_Color
+XP_Raw/Props/SignRoofTop_01/SignRoofTop_Metal_01
+    PaintColor2    ShaderParameterType_Color
+Levels/SP_Earthquake/Architecture/School/School01_RailingShader
+    PaintColor    ShaderParameterType_Color
+Architecture/ME_House01/_House_PaintedPlaster_01_Destruction_VertDestrVolume
+    ShaderParameters    ShaderParameterType_Vec4
+    DestrVolEdgeThickness    ShaderParameterType_Scalar
+    BaseColor    ShaderParameterType_Color
+    DestrVolDetailAlphaInfluence    ShaderParameterType_Scalar
+    DirtColor    ShaderParameterType_Color
+    DetailColor    ShaderParameterType_Color
+    PaintColor    ShaderParameterType_Color
+    Spec_BaseDetailDirtPaint    ShaderParameterType_Vec4
+Weapons/Shaders/Glass_Base
+    Dist    ShaderParameterType_Scalar
+    Fade    ShaderParameterType_Scalar
+    Specular    ShaderParameterType_Color
+    Diffuse    ShaderParameterType_Color
+    Opacity    ShaderParameterType_Color
+    Color    ShaderParameterType_Color
+Objects/Debris/VariousDebris/SS_DebrisScattered_01
+    SpecularScale    ShaderParameterType_Scalar
+Objects/Shaders/PropPreset_ColorTweakable
+    SmoothnessScale    ShaderParameterType_Scalar
+    FresnelBias    ShaderParameterType_Scalar
+    FresnelExponent    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+    TweakableColor    ShaderParameterType_Color
+Architecture/Shaders/FacadePresetInterior
+    SpecularScale    ShaderParameterType_Scalar
+    Smoothness    ShaderParameterType_Scalar
+Objects/Shaders/PropPreset_DiffuseOnly
+    SpecularScale    ShaderParameterType_Scalar
+    SmoothnessScale    ShaderParameterType_Scalar
+Weapons/Shaders/Zoom_Glass
+    Color4    ShaderParameterType_Color
+    Dist    ShaderParameterType_Scalar
+    Fade    ShaderParameterType_Scalar
+Shaders/Root/CharacterRoot_Eye
+    Color    ShaderParameterType_Color
+Vehicles/Shaders/VehiclePreset_Mud_LOD
+    ScratchTiling    ShaderParameterType_Vec2
+    WearAmount    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    SmoothnessRegular    ShaderParameterType_Scalar
+    CamoBrightness    ShaderParameterType_Color
+    SmoothnessWear    ShaderParameterType_Scalar
+    DiffuseBrighness    ShaderParameterType_Color
+shaders/presets/OLD_PropPreset_Metal
+    Roughness    ShaderParameterType_Scalar
+    DamageAmount    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+Architecture/ME_Residential_07/WindowCracked_Shader
+    FresnelBias    ShaderParameterType_Scalar
+    Smoothness    ShaderParameterType_Scalar
+shaders/Root/CharacterRoot_XP4
+    _DirtColor    ShaderParameterType_Color
+    CamoTileFactor    ShaderParameterType_Scalar
+    _DirtScaleMax    ShaderParameterType_Scalar
+Shaders/Root/CharacterRoot_AlphaTest
+    AlphaScale    ShaderParameterType_Color
+    SpecScale    ShaderParameterType_Color
+Objects/Shaders/PropPreset_WET
+    FresnelBias    ShaderParameterType_Scalar
+    SmoothnessScale    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+    FresnelExponent    ShaderParameterType_Scalar
+Weapons/Shaders/Aimingdots
+    TapeColor    ShaderParameterType_Color
+Objects/Vegetation/Shaders/VegetationTranslucentVertexLODPreset
+    Colorvariation    ShaderParameterType_Color
+Vehicles/Shaders/VehiclePreset_Mud_Decals
+    ScratchTiling    ShaderParameterType_Vec2
+    ScatchAmount    ShaderParameterType_Scalar
+    CamoBrightness    ShaderParameterType_Color
+    WearAmount    ShaderParameterType_Scalar
+    SmoothnessRegular    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    SmoothnessWear    ShaderParameterType_Scalar
+    SmoothnessMasked    ShaderParameterType_Scalar
+Architecture/Shaders/FacadePreset1UV_Simple_DestrVolume
+    DestrVolEdgeThickness    ShaderParameterType_Scalar
+    DestrVolDetailAlphaInfluence    ShaderParameterType_Scalar
+XP_Raw/_CommonTextures/_HouseTemplateShader_01_Destruction
+    ShaderParameters    ShaderParameterType_Vec4
+    DetailDiffuseTint    ShaderParameterType_Color
+    DestrVolDetailAlphaInfluence    ShaderParameterType_Scalar
+Architecture/Shaders/FacadePreset1UV_noNormConsole_DestrVolume
+    SpecularPower    ShaderParameterType_Scalar
+    DestrVolEdgeThickness    ShaderParameterType_Scalar
+    TileValue    ShaderParameterType_Vec2
+    DestrVolDetailAlphaInfluence    ShaderParameterType_Scalar
+Shaders/Root/CharacterRoot_LOD_XP4
+    CamoTileFactor    ShaderParameterType_Scalar
+Weapons/Shaders/WeaponPresetFP
+    ScratchTiling    ShaderParameterType_Vec2
+    WearAmount    ShaderParameterType_Scalar
+    Emissive    ShaderParameterType_Color
+    SmoothnessMasked    ShaderParameterType_Scalar
+    DiffuseDarkening    ShaderParameterType_Color
+    CamoDarkening    ShaderParameterType_Color
+    CamoTiling    ShaderParameterType_Vec2
+    SmoothnessRegular    ShaderParameterType_Scalar
+    NormalTiling    ShaderParameterType_Vec2
+    SmoothnessWear    ShaderParameterType_Scalar
+    WearPower    ShaderParameterType_Scalar
+XP_Raw/_CommonTextures/_House_PaintedPlaster_01_Destruction
+    ShaderParameters    ShaderParameterType_Vec4
+    BaseColor    ShaderParameterType_Color
+    DirtColor    ShaderParameterType_Color
+    DetailColor    ShaderParameterType_Color
+    PaintColor    ShaderParameterType_Color
+    Spec_BaseDetailDirtPaint    ShaderParameterType_Vec4
+Vehicles/Shaders/VehiclePreset_Mud
+    ScratchTiling    ShaderParameterType_Vec2
+    CamoBrightness    ShaderParameterType_Color
+    ScatchAmount    ShaderParameterType_Scalar
+    SmoothnessMasked    ShaderParameterType_Scalar
+    WearAmount    ShaderParameterType_Scalar
+    SmoothnessRegular    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+    SmoothnessWear    ShaderParameterType_Scalar
+    WearPower    ShaderParameterType_Scalar
+Props/Shaders/OLD_PropPreset_Glass
+    MinOpacity    ShaderParameterType_Scalar
+    ColorTint    ShaderParameterType_Color
+    MaxOpacity    ShaderParameterType_Scalar
+shaders/Root/CharacterRoot_1P
+    SmoothnessScale    ShaderParameterType_Scalar
+    DetailTexture_RTile    ShaderParameterType_Scalar
+    DetailTexture_Btile    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+    DetailTexture_GTile    ShaderParameterType_Scalar
+Shaders/Presets/OLD_PropPreset_Alphatest
+    SpecularMultiplier    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+    Roughness    ShaderParameterType_Scalar
+Levels/SP_Bank/Architecture/MOD/Shaders/OuterWall
+    DirtAmount    ShaderParameterType_Scalar
+    TileValue    ShaderParameterType_Vec2
+Vehicles/Common/Kits/Kits
+    Brightness    ShaderParameterType_Scalar
+Vehicles/Shaders/VehiclePreset_Wreckage_LOD
+    BurnedTextureTiling    ShaderParameterType_Vec2
+    CamoTiling    ShaderParameterType_Vec2
+Vehicles/Shaders/VehiclePreset_Wreckage
+    BurnedTextureTiling    ShaderParameterType_Vec2
+    WearPower    ShaderParameterType_Scalar
+    WearAmount    ShaderParameterType_Scalar
+    CamoTiling    ShaderParameterType_Vec2
+Weapons/Shaders/Scope_HUD_Preset
+    OpacityMod    ShaderParameterType_Scalar
+    Color    ShaderParameterType_Vec3
+shaders/Root/CharacterRoot_LOD
+    CamoTileFactor    ShaderParameterType_Scalar
+    ScratchScale    ShaderParameterType_Scalar
+    DirtFactor    ShaderParameterType_Scalar
+    HeatScale    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+    DiffuseScale    ShaderParameterType_Scalar
+Props/Vehicles/CivilianCar_03/CivilianCar_03_LOD_main
+    CoatColor    ShaderParameterType_Color
+Objects/Shaders/PropPreset_Metal
+    SpecularScale    ShaderParameterType_Scalar
+    SmoothnessScale    ShaderParameterType_Scalar
+    FresnelBias    ShaderParameterType_Scalar
+    FresnelExponent    ShaderParameterType_Scalar
+Architecture/Shaders/PropPreset2UVsColorMask
+    SpecMultiplier    ShaderParameterType_Scalar
+    FresnelBias    ShaderParameterType_Scalar
+    SmoothnessPower    ShaderParameterType_Scalar
+    FresnelExponent    ShaderParameterType_Scalar
+    SmoothnessMultiplier    ShaderParameterType_Scalar
+    TileValueTexCoord1    ShaderParameterType_Scalar
+    Color    ShaderParameterType_Color
+Objects/Shaders/CarpaintPreset
+    DColor    ShaderParameterType_Color
+    EdgeColor    ShaderParameterType_Color
+    SmoothScale    ShaderParameterType_Scalar
+    CoatColor    ShaderParameterType_Color
+Architecture/Shaders/StorefrontPreset2UVs_WET
+    SpecularMultiplier    ShaderParameterType_Scalar
+    Smoothness    ShaderParameterType_Scalar
+    SpecularPower    ShaderParameterType_Scalar
+Weapons/Shaders/WeaponPresetNoCamo3P
+    DiffuseDarkening    ShaderParameterType_Color
+Props/Shaders/OLDPropPreset_Metal
+    SpecularScale    ShaderParameterType_Scalar
+    Smoothness    ShaderParameterType_Scalar
+Props/Shaders/OLD_PropPreset
+    SpecularScale    ShaderParameterType_Scalar
+    FresnelBias    ShaderParameterType_Scalar
+    Smoothness    ShaderParameterType_Scalar
+    FresnelExponent    ShaderParameterType_Scalar
+Objects/BazaarFloorStraight/BazaarFloorShader
+    SpecularScale    ShaderParameterType_Scalar
+    SmoothnessScale    ShaderParameterType_Scalar
+Shaders/Root/CharacterRoot_Skin
+    _DirtIntensity    ShaderParameterType_Color
+    _SpecularScale    ShaderParameterType_Color
+    _SmoothnessOuter    ShaderParameterType_Color
+    _SmoothnessInner    ShaderParameterType_Color
+    _SpecularOuter    ShaderParameterType_Color
+Levels/MP_001/Lighting/Glow_LightPoly
+    EmissiveColor    ShaderParameterType_Color
+Props/StreetProps/MetalGate_02/MetalGate_02_Clothshader
+    DirtColor    ShaderParameterType_Color
+    MainColor    ShaderParameterType_Color
+Architecture/Shaders/FacadePreset2UVs_WET
+    SpecularMultiplier    ShaderParameterType_Scalar
+    Smoothness2    ShaderParameterType_Scalar
+    TileValue    ShaderParameterType_Scalar
+    SpecularPower    ShaderParameterType_Scalar
+Test/Kenny_Test_LV01/LightCeiling_01/SS_LightCeiling_01_ON
+    Color    ShaderParameterType_Color
+Objects/Container_01/Container_01_Metal
+    MainColor    ShaderParameterType_Color
+    DecalColor    ShaderParameterType_Color
+Architecture/Shaders/FacadePreset2UVs_DestrVolume
+    TileValue    ShaderParameterType_Scalar
+Levels/MP_001/Props/Shaders/MP001Road_Metal_1UV
+    Smoothness    ShaderParameterType_Scalar
+    FresnelBias    ShaderParameterType_Scalar
+    FresnelExponent    ShaderParameterType_Scalar
+Objects/Vegetation/Shaders/VegetationTranslucentVertexPreset
+    Color4    ShaderParameterType_Color
+    TranslucencyOut    ShaderParameterType_Color
+    DiffuseOut    ShaderParameterType_Color
+    TranslucencyIn    ShaderParameterType_Color
+    SpecularMul    ShaderParameterType_Scalar
+    Color3    ShaderParameterType_Color
+    SmoothnessMul    ShaderParameterType_Scalar
+    Colorvariation    ShaderParameterType_Color
+    DiffuseIn    ShaderParameterType_Color
+Architecture/Shaders/FasadePreset1UV_color_noNormConsole_DestrVolume
+    SpecularPower    ShaderParameterType_Scalar
+    TileValue    ShaderParameterType_Scalar
+    DestrVolDetailAlphaInfluence    ShaderParameterType_Scalar
+Shaders/Presets/AwningPreset
+    ColorTint    ShaderParameterType_Color
+Architecture/ME_StorefrontsAddons/Stairs
+    SpecularMultiplier    ShaderParameterType_Scalar
+    FresnelBias    ShaderParameterType_Scalar
+    FresnelExponent    ShaderParameterType_Scalar
+    SpecularPower    ShaderParameterType_Scalar
+    MainTileValue    ShaderParameterType_Vec2
+    Smoothness    ShaderParameterType_Scalar
+    TileValue    ShaderParameterType_Vec2
+Props/StreetProps/ElectricBoxLarge_01/ElectricBoxLarge01
+    Smoothness    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+Architecture/Shaders/FacadePresetInterior_DestrVolume
+    DestrVolDetailAlphaInfluence    ShaderParameterType_Scalar
+    SpecularScale    ShaderParameterType_Scalar
+    DestrVolEdgeThickness    ShaderParameterType_Scalar
+Props/DestructionProps/ConcreteWeight_01/ConcreteWeight_Tile
+    SpecularScale    ShaderParameterType_Scalar
+    SmoothnessScale    ShaderParameterType_Scalar
+Weapons/Shaders/WeaponPresetShadowNoCamoFP
+    SmoothnessRegular    ShaderParameterType_Scalar
+    NormalTiling    ShaderParameterType_Vec2
+    DiffuseDarkening    ShaderParameterType_Color
+    SmoothnessMasked    ShaderParameterType_Scalar
+Architecture/Shaders/FasadePreset1UV_color
+    SpecularMultiplier    ShaderParameterType_Scalar
+    TileValue    ShaderParameterType_Scalar
+    SpecularPower    ShaderParameterType_Scalar
+    Smoothness    ShaderParameterType_Scalar
+    Color    ShaderParameterType_Color
+Objects/Shaders/PropPreset_AlphaTest
+    SpecularScale    ShaderParameterType_Scalar
+    SmoothnessScale    ShaderParameterType_Scalar
+Props/InteriorProps/ModernSofa01/ModerSofaMain
+    SpecularMultiplier    ShaderParameterType_Scalar
+XP_Raw/Props/Sign_KKC/Sign_KKC_Shader
+    RimColor    ShaderParameterType_Color
+Weapons/Shaders/WeaponPresetShadowFP
+    ScratchTiling    ShaderParameterType_Vec2
+    WearAmount    ShaderParameterType_Scalar
+    Emissive    ShaderParameterType_Color
+    SmoothnessMasked    ShaderParameterType_Scalar
+    DiffuseDarkening    ShaderParameterType_Color
+    CamoDarkening    ShaderParameterType_Color
+    CamoTiling    ShaderParameterType_Vec2
+    SmoothnessRegular    ShaderParameterType_Scalar
+    NormalTiling    ShaderParameterType_Vec2
+    SmoothnessWear    ShaderParameterType_Scalar
+    WearPower    ShaderParameterType_Scalar
+Architecture/FacadeDecorations/Shaders/EdgeDec_shader_Normal
+    SpecularMultiplier    ShaderParameterType_Scalar
+    Smoothness    ShaderParameterType_Scalar
+    SpecularPower    ShaderParameterType_Scalar
+Objects/CeilingLight_02/SS_CeilingLight_02_ON
+    Color    ShaderParameterType_Color
+Architecture/Shaders/FacadePreset2UVs
+    SpecularMultiplier    ShaderParameterType_Scalar
+    Smoothness2    ShaderParameterType_Scalar
+    TileValue    ShaderParameterType_Scalar
+    FresnelExponent    ShaderParameterType_Scalar
+    SpecularPower    ShaderParameterType_Scalar
+    SmoothnessContrast    ShaderParameterType_Scalar
+    Smoothness    ShaderParameterType_Scalar
+    FresnelBias    ShaderParameterType_Scalar
+Weapons/XP4_Crossbow_Prototype/Preset_Metal_xp4
+    SmoothnessRegular    ShaderParameterType_Scalar
+    SmoothnessMasked    ShaderParameterType_Scalar
+Architecture/Shaders/FacadePreset_Window_Opaque
+    SpecularScale    ShaderParameterType_Scalar
+    FresnelBias    ShaderParameterType_Scalar
+    Smoothness    ShaderParameterType_Scalar
+Levels/MP_001/Props/Shaders/MP001Road_Metal
+    Smoothness    ShaderParameterType_Scalar
+    FresnelBias    ShaderParameterType_Scalar
+    FresnelExponent    ShaderParameterType_Scalar
+Architecture/Shaders/FacadePresetFracture
+    TileValue    ShaderParameterType_Vec2

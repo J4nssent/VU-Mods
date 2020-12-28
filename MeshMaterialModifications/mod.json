@@ -1,0 +1,9 @@
+{
+	"Name": "MeshMaterialModifications",
+	"Authors": ["Janssent"],
+	"Description": "Generically tweak textures, shaders and shader parameters of meshes",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

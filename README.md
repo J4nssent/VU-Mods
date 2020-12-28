@@ -43,4 +43,5 @@ A few useful VU mods and a lot of useless mods just for fun.
 | [RMMissileSpawn](RMMissileSpawn) | POC mod showing how to clone and spawn a mortar missile. |
 | [NoMotionDamping](NoMotionDamping) | Sets helicopter MotionDamping to nil, allowing them to go upside down. |
 | [AirStrike](AirStrike) | POC artillery mod, including overly complex target crosshair. |
-| [VehicleDamageTweak](VehicleDamageTweak) | POC mod showing how the the MaterialGrid works and can be modified (to make vehicle take bullet damage). |
+| [VehicleDamageTweak](VehicleDamageTweak) | POC mod showing how the the MaterialGrid works and can be modified (to make vehicles take bullet damage). |
+| [MeshMaterialModifications](MeshMaterialModifications) | Generically tweak textures, shaders and shader parameters of meshes. |
