@@ -1,9 +1,11 @@
 return {
 	"Weapons/Textures/Bullets_D",
+	"Weapons/Textures/Blacktape_D",
+	"Weapons/Textures/Silvertape_D",
 	"Weapons/Textures/DuctTape_D",
 	"Weapons/Textures/Dust_D",
-	"Weapons/Textures/Silvertape_D",
-	
+	"Weapons/Textures/Stockcloth_D",
+
 	"Weapons/Textures/WoodlandCamo_D",
 	"Weapons/Textures/WoodlandCamo02_D",
 	"Weapons/Textures/WoodlandCamo03_D",

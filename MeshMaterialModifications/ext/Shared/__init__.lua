@@ -32,29 +32,21 @@ function ModifyEntry(entry, meshConfig)
 	entry:MakeWritable()
 
 	for materialIndex, materialConfig in pairs(meshConfig.MATERIALS) do
-		local shaderConfig = materialConfig.SHADER
-
 		local meshMaterial = entry.materials[materialIndex].material
 
-		if shaderConfig ~= nil then
-			if meshMaterial.isLazyLoaded then
-				meshMaterial:RegisterLoadHandler(shaderConfig, ModifyMeshMaterial)
-			else
-				ModifyMeshMaterial(shaderConfig, meshMaterial)
-			end
+		local shaderConfig = materialConfig.SHADER
+		if shaderConfig ~= nil then	
+			CallOrRegisterLoadHandler(meshMaterial, shaderConfig, ModifyMeshMaterial)
 		end
 
 		local textureConfig = materialConfig.TEXTURES
-
 		if textureConfig ~= nil then
 			if textureConfig.TYPE == ParameterModificationType.ReplaceParameters then
 				entry.materials[materialIndex] = MeshVariationDatabaseMaterial()
 
-				if meshMaterial.isLazyLoaded then
-					meshMaterial:RegisterLoadHandler(entry.materials[materialIndex], AssignMeshMaterial)
-				else
-					AssignMeshMaterial(entry.materials[materialIndex], meshMaterial)
-				end
+				CallOrRegisterLoadHandler(meshMaterial, entry.materials[materialIndex], function(databaseMaterial, meshMaterial)
+					databaseMaterial.material = MeshMaterial(meshMaterial)
+				end)
 			end
 
 			if textureConfig.PARAMETERS ~= nil then
@@ -64,10 +56,13 @@ function ModifyEntry(entry, meshConfig)
 	end
 end
 
-function AssignMeshMaterial(databaseMaterial, meshMaterial)
-	databaseMaterial.material = MeshMaterial(meshMaterial)
+function CallOrRegisterLoadHandler(instance, userData, handler)
+	if instance.isLazyLoaded then
+		instance:RegisterLoadHandler(userData, handler)
+	else
+		handler(userData, instance)
+	end
 end
-
 
 function ModifyMeshMaterial(shaderConfig, meshMaterial)
 	meshMaterial = MeshMaterial(meshMaterial)

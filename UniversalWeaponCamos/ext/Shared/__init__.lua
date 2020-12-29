@@ -1,8 +1,7 @@
-
 -- This mod creates a mesh texture variation and matching unlockAsset for every texture in the config file, for every primary weapon in the game.
 -- It does not create a MeshMaterialVariation for the custom MeshVariationDatabaseEntry (unlike vanilla), so the replaced textures use the same shader and shader parameters as the original
 
-local ITEMS_PER_FRAME = 100
+local ITEMS_PER_FRAME = 5
 local Async = require('__shared/Async')
 
 local config = require('__shared/config')
@@ -32,13 +31,10 @@ function AddWeaponSkinEntries(meshVariationDatabase)
 
 	--print("Iterating MeshVariationDatabase")
 
+	local processed_items = 0
+
 	-- Iterate all entries in the gamemodes MeshVariationDatabase
 	for index, entry in pairs(meshVariationDatabase.entries) do
-
-		if math.fmod(index, ITEMS_PER_FRAME) == 0 then
-
-			Async:Yield()
-		end
 
 		entry = MeshVariationDatabaseEntry(entry)
 
@@ -54,6 +50,8 @@ function AddWeaponSkinEntries(meshVariationDatabase)
 
 				-- Create an array for every weapon
 				if variationDataTables[weaponName] == nil then
+
+					processed_items = processed_items + 1
 					
 					variationDataTables[weaponName] = {}
 
@@ -77,17 +75,23 @@ function AddWeaponSkinEntries(meshVariationDatabase)
 				-- Clone the default weapon mesh entry (and change name hash and texture values) for each camo
 				if meshName:ends('1p_Mesh') then
 
-					for camoId, entryData in pairs(variationDataTables[weaponName]) do
+					for camoId, variationData in pairs(variationDataTables[weaponName]) do
 					
-						entryData.mesh1pEntry = CloneEntry(entry, entryData.variationNameHash, config[camoId].textureName)
+						variationData.mesh1pEntry = CloneEntry(entry, variationData.variationNameHash, config[camoId].textureName)
 					end
 
 				elseif meshName:ends('3p_Mesh') then
 
-					for camoId, entryData in pairs(variationDataTables[weaponName]) do
+					for camoId, variationData in pairs(variationDataTables[weaponName]) do
 
-						entryData.mesh3pEntry = CloneEntry(entry, entryData.variationNameHash, config[camoId].textureName)
+						variationData.mesh3pEntry = CloneEntry(entry, variationData.variationNameHash, config[camoId].textureName)
 					end
+				end
+
+				-- Run next frame
+				if math.fmod(processed_items, ITEMS_PER_FRAME) == 0 then
+
+					Async:Yield()
 				end
 			end 
 		end

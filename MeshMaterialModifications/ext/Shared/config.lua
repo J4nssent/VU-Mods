@@ -74,14 +74,23 @@ local GOLD_MAGUM_CONFIG = {
 
 local BLACK_M16_CONFIG = {
 	MATERIALS = {
+		[1] = { SHADER = { NAME = "SomeNoneExistentShader" } },
 		[2] = { TEXTURES = BLACK_CAMO_TEXTURE },
-		[4] = { TEXTURES = BLACK_CAMO_TEXTURE }
+		[3] = { SHADER = { NAME = "SomeNoneExistentShader" } },
+		[4] = { TEXTURES = BLACK_CAMO_TEXTURE },
+	}
+}
+
+local BLACK_M16_SIGHT_CONFIG = {
+	MATERIALS = {
+		[1] = {	TEXTURES = BLACK_CAMO_TEXTURE },
+		[2] = {	TEXTURES = BLACK_CAMO_TEXTURE },
 	}
 }
 
 
 local config = {
-	
+
 	-- JUNGLE LAV ---------------------------------------------------------------------------------------------
 	-- vehicles/lav25/lav25_Mesh
 	['651E110D-9DD1-F900-658E-18504BD8ABF1'] = {
@@ -173,11 +182,23 @@ local config = {
 	-- weapons/taurus44/taurus44_3p_Mesh
 	['D47D9E4A-E1F0-76A0-9ECD-2C24FAE78714'] = GOLD_MAGUM_CONFIG,
 
-	-- BLACK M16A4 --------------------------------------------------------------------------------------------
+	-- BLACK M16A4 (WITHOUT STOCK CLOTH) ----------------------------------------------------------------------
 	-- weapons/m16a4/m16a4_1p_Mesh
 	['BA1C98ED-C0FA-0B1A-B371-8AFCE1505B01'] = BLACK_M16_CONFIG,
 	-- weapons/m16a4/m16a4_3p_Mesh
 	['1EF3B639-6E13-0BC7-B909-9D3408C5D537'] = BLACK_M16_CONFIG,
+
+	-- BLACK IRONSIGHT/SIGHT
+	-- weapons/accessories/m16_ironsight/m16_sight_1p_Mesh
+	['DE3E1B98-AABE-ADB3-918B-33A003785A76'] = BLACK_M16_SIGHT_CONFIG,
+	-- weapons/accessories/m16_ironsight/m16_sight_3p_Mesh
+	['29DE7061-1216-DB69-84E7-02211ACE0345'] = BLACK_M16_SIGHT_CONFIG,
+
+	-- BLACK IRONSIGHT/IRONSIGHT
+	-- weapons/accessories/m16_ironsight/m16_ironsight_1p_Mesh
+	['14EA621F-DDFD-A5C7-852B-6D351DFB318B'] = BLACK_M16_SIGHT_CONFIG,
+	-- weapons/accessories/m16_ironsight/m16_ironsight_3p_Mesh
+	['2B01B83B-3E70-9318-F6B4-07D54478A901'] = BLACK_M16_SIGHT_CONFIG,
 }
 
 return config

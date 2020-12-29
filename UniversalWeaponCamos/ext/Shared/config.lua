@@ -52,5 +52,5 @@ return {
 	{ id = 'PURE_BLACK', displayName = "Pure Black Color", textureName = "Characters/Shared/ColorSwatches/pure_black", iconTexturePath = "UI/Art/Persistence/WeaponAccessory/NoSelection" },
 	{ id = 'WHITE', displayName = "White Color", textureName = "Characters/shared/ColorSwatches/white", iconTexturePath = "UI/Art/Persistence/WeaponAccessory/NoSelection" },
 	{ id = 'GREY', displayName = "Grey Color", textureName = "Characters/Shared/ColorSwatches/Grey", iconTexturePath = "UI/Art/Persistence/WeaponAccessory/NoSelection" },
-	{ id = 'GREY03', displayName = "Grey03 Color", textureName = "Characters/Shared/ColorSwatches/Grey03", iconTexturePath = "UI/Art/Persistence/WeaponAccessory/NoSelection" },		
+	{ id = 'GREY03', displayName = "Grey03 Color", textureName = "Characters/Shared/ColorSwatches/Grey03", iconTexturePath = "UI/Art/Persistence/WeaponAccessory/NoSelection" },	
 }

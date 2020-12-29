@@ -16,6 +16,10 @@ local MIN_PITCH = -0.3
 
 local INERTIA = 0.9
 
+Events:Subscribe('Extension:Loaded', function()
+	-- WebUI to update mouse button and mouse wheel levels
+	WebUI:Init()
+end)
 
 local mouseButtonLevel = 0
 local mouseWheelLevel = 0
@@ -48,8 +52,6 @@ Hooks:Install('UI:PushScreen', 999, function(hook, screen, graphPriority, parent
 			uiCompData:MakeWritable()
 			-- Store a clone for default values
 			defaultData = UICustomizationCompData(uiCompData:Clone())
-			-- WebUI to update mouse button and mouse wheel levels
-			WebUI:Init()
 		end
 
 		if updateInputEvent == nil then
@@ -91,13 +93,10 @@ Hooks:Install('UI:PushScreen', 999, function(hook, screen, graphPriority, parent
 		WebUI:Hide()
 		UnsubscribeEvents()
 		ResetData()	
+		uiCompData = nil
 	end
 end)
 
-Events:Subscribe('Level:Destroy', function()
-	uiCompData = nil
-	defaultData = nil
-end)
 
 local previousPosition = Vec2()
 local pendingRotation = 0
@@ -169,6 +168,7 @@ function UnsubscribeEvents()
 	if mouseButtonEvent ~= nil then mouseButtonEvent:Unsubscribe() mouseButtonEvent = nil end
 	if mouseWheelEvent ~= nil then mouseWheelEvent:Unsubscribe() mouseWheelEvent = nil end
 	if unloadEvent ~= nil then unloadEvent:Unsubscribe() unloadEvent = nil end
+	if levelDestroyEvent ~= nil then levelDestroyEvent:Unsubscribe() levelDestroyEvent = nil end
 end
 
 function ResetData()
