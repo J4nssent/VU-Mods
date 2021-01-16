@@ -1,0 +1,9 @@
+{
+	"Name": "EndOfRoundTime",
+	"Authors": ["Janssent"],
+	"Description": "Adds a vars.endOfRoundTime rcon/startup command for setting the duration of the end-of-round menu, scoreboard and win-message",
+	"URL": "",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

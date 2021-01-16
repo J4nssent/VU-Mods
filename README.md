@@ -33,6 +33,7 @@ A few useful VU mods and a lot of useless mods just for fun.
 | [UniversalWeaponCamos](UniversalWeaponCamos) | Adds a bunch of camouflages to all primary weapons. |
 | [ScoutRocketpodsUnlock](ScoutRocketpodsUnlock) | Adds a rocketpod unlock and weapon to the scout helicopters. |
 | [ScoutTowUnlock](ScoutTowUnlock) | Adds an ATGM rocket unlock and weapon to the scout helicopters. |
+| [EndOfRoundTime](EndOfRoundTime) | Adds a vars.endOfRoundTime rcon/startup command for setting the duration of the end-of-round menu, scoreboard and win-message. |
 
 |  | Other Mods |
 | --- | ----------- |
