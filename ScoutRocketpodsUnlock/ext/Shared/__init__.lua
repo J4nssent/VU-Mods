@@ -36,7 +36,7 @@ function ModifyBlueprint(minigunIndex, firingData, unlock, blueprint)
 	local weaponFiringAsset = WeaponFiringDataAsset(firingData)
 
 	local rocketpodsWeaponComponent = WeaponComponentData()
-	rocketpodsWeaponComponent.weaponFiring = WeaponFiringData(weaponFiringAsset.data:Clone())
+	rocketpodsWeaponComponent.weaponFiring = WeaponFiringData(weaponFiringAsset.data:Clone(MathUtils:RandomGuid()))
 	
 	-- The UI decides what crosshair to use depending on the weaponName hash it gets from the UIVehicleCompData
 	-- https://github.com/EmulatorNexus/Venice-EBX/blob/b80b49f6be7010b968eca36654e70819402fa259/UI/Flow/Screen/Vehicle/DefaultHelicopterScreen.txt#L351
