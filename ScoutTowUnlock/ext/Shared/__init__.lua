@@ -34,7 +34,7 @@ function ModifyBlueprint(firingData, unlock, blueprint)
 	local weaponFiringAsset = WeaponFiringDataAsset(firingData)
 
 	local weaponComponent = WeaponComponentData()
-	weaponComponent.weaponFiring = WeaponFiringData(weaponFiringAsset.data:Clone())
+	weaponComponent.weaponFiring = WeaponFiringData(weaponFiringAsset.data:Clone(MathUtils:RandomGuid()))
 	weaponComponent.classification = WeaponClassification.WCNone
 	
 	-- The UI decides what crosshair to use depending on the weaponName hash it gets from the UIVehicleCompData
